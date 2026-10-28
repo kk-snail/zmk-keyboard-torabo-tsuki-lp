@@ -4,9 +4,9 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#if defined(TORABO_TSUKI_LP_INPUT_HIRES_DIAL)
-#include <behaviors/hires_dial.dtsi>
-#endif
+// #if defined(TORABO_TSUKI_LP_INPUT_HIRES_DIAL)
+// #include <behaviors/hires_dial.dtsi>
+// #endif
 
 / {
     combos {
