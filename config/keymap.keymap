@@ -1,9 +1,9 @@
 // tsuki-keymap-bench: combo / hold-trigger positions use the S layout numbering
+
 #include <input/processors.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
 / {
@@ -92,93 +92,91 @@
         };
     };
 
+    macros {
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         base_layer {
             display-name = "Base";
             bindings = <
-&trans  &trans        &trans        &trans        &trans        &trans                                &trans       &trans  &trans      &trans      &trans      &trans
-&trans  &lt 4 Q       &hml LGUI W   &kp E         &kp R         &kp T                                 &kp Y        &kp U   &kp I       &kp O       &lt 6 P     &trans
-&trans  &hml LCTRL A  &hml LCTRL S  &kp D         &kp F         &kp G         &trans      &trans      &kp H        &kp J   &kp K       &kp L       &kp BSPC    &trans
-&trans  &hml LSHFT Z  &hml LSHFT X  &hml LSHFT C  &hml LSHFT V  &hml LSHFT B  &kp FSLH    &kp MINUS   &kp N        &kp M   &kp COMMA   &kp DOT     &kp DEL     &trans
-&trans  &kp ESC       &kp TAB       &none         &kp LALT      &lt 1 LANG2   &lt 2 SPACE &kp RET     &lt 3 LANG1  &none   &none       &mkp RCLK   &kp UNDER   &trans
+&trans  &trans        &trans        &trans        &trans        &trans                                &trans       &trans  &trans     &trans   &trans     &trans
+&trans  &lt 4 Q       &hml LGUI W   &kp E         &kp R         &kp T                                 &kp Y        &kp U   &kp I      &kp O    &lt 6 P    &trans
+&trans  &hml LCTRL A  &hml LCTRL S  &kp D         &kp F         &kp G         &trans       &trans     &kp H        &kp J   &kp K      &kp L    &kp BSPC   &trans
+&trans  &hml LSHFT Z  &hml LSHFT X  &hml LSHFT C  &hml LSHFT V  &hml LSHFT B  &kp FSLH     &kp MINUS  &kp N        &kp M   &kp COMMA  &kp DOT  &kp DEL    &trans
+&trans  &kp ESC       &kp TAB       &none         &kp LALT      &lt 1 LANG2   &lt 2 SPACE  &kp RET    &lt 3 LANG1  &none   &none      &mo 5    &kp UNDER  &trans
             >;
         };
 
         num {
             display-name = "num";
             bindings = <
-&trans  &trans     &trans  &trans   &trans    &trans                                &trans    &trans     &trans     &trans    &trans    &trans
-&trans  &kp STAR   &kp N7  &kp N8   &kp N9    &kp PLUS                              &none     &none      &none      &none     &none     &trans
-&trans  &kp FSLH   &kp N4  &kp N5   &kp N6    &kp MINUS  &trans    &trans           &kp AT    &kp DLLR   &kp PRCNT  &kp AMPS  &none     &trans
-&trans  &kp CARET  &kp N1  &kp N2   &kp N3    &kp COLON  &kp BSPC  &none            &kp SEMI  &kp COLON  &none      &kp HASH  &kp BSPC  &trans
-&trans  &kp ESC    &kp N0  &kp DOT  &kp BSPC  &trans     &trans    &trans           &trans    &none      &none      &none     &kp DEL   &trans
+&trans  &trans     &trans  &trans   &trans    &trans                       &trans    &trans     &trans     &trans    &trans    &trans
+&trans  &kp STAR   &kp N7  &kp N8   &kp N9    &kp PLUS                     &none     &none      &none      &none     &none     &trans
+&trans  &kp FSLH   &kp N4  &kp N5   &kp N6    &kp MINUS  &trans    &trans  &kp AT    &kp DLLR   &kp PRCNT  &kp AMPS  &none     &trans
+&trans  &kp CARET  &kp N1  &kp N2   &kp N3    &kp COLON  &kp BSPC  &none   &kp SEMI  &kp COLON  &none      &kp HASH  &kp BSPC  &trans
+&trans  &kp ESC    &kp N0  &kp DOT  &kp BSPC  &trans     &trans    &trans  &trans    &none      &none      &none     &kp DEL   &trans
             >;
         };
 
         arrow {
             display-name = "arrow";
             bindings = <
-&trans  &trans       &trans              &trans               &trans               &trans                                 &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &m_win_left  &kp LGUI            &kp UP               &none                &m_win_right                           &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &none        &kp LEFT            &kp DOWN             &kp RIGHT            &none         &trans      &trans       &trans  &trans  &trans  &trans  &none   &trans
-&trans  &kp LSHFT    &m_win_third_left  &m_win_third_center  &m_win_third_right  &none         &kp LS(FSLH)&kp LS(N1)   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &none        &none               &none                &none                &trans        &trans      &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans             &trans               &trans              &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &m_win_left  &kp LGUI           &kp UP               &none               &m_win_right                            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &none        &kp LEFT           &kp DOWN             &kp RIGHT           &none         &trans        &trans      &trans  &trans  &trans  &trans  &none   &trans
+&trans  &kp LSHFT    &m_win_third_left  &m_win_third_center  &m_win_third_right  &none         &kp LS(FSLH)  &kp LS(N1)  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &none        &none              &none                &none               &trans        &trans        &trans      &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         skopki {
             display-name = "skopki";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                &trans      &trans        &trans        &trans  &trans  &trans
-&trans  &none   &kp F7  &kp F8  &kp F9  &kp F12                               &trans      &kp LS(RBKT)  &kp LS(BSLH)  &trans  &trans  &trans
-&trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans        &trans         &kp LS(N2)  &kp LS(N8)    &kp LS(N9)    &none   &none   &trans
-&trans  &none   &kp F1  &kp F2  &kp F3  &kp F10  &none         &none          &kp LS(N7)  &kp RBKT      &kp BSLH      &none   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans   &trans        &trans         &trans      &trans        &trans        &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                   &trans      &trans        &trans        &trans  &trans  &trans
+&trans  &none   &kp F7  &kp F8  &kp F9  &kp F12                  &trans      &kp LS(RBKT)  &kp LS(BSLH)  &trans  &trans  &trans
+&trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans  &trans  &kp LS(N2)  &kp LS(N8)    &kp LS(N9)    &none   &none   &trans
+&trans  &none   &kp F1  &kp F2  &kp F3  &kp F10  &none   &none   &kp LS(N7)  &kp RBKT      &kp BSLH      &none   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans      &trans        &trans        &trans  &trans  &trans
             >;
         };
 
         function {
             display-name = "function";
             bindings = <
-&trans  &trans  &trans        &trans        &trans        &trans                                &trans  &trans      &trans    &trans      &trans          &trans
-&trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none                                 &trans  &none       &none     &kp PSCRN   &screenshot     &trans
-&trans  &trans  &none         &none         &kp C_VOL_UP  &kp C_BRI_UP  &trans   &trans         &none   &kp C_PREV  &kp C_PP  &kp C_NEXT  &trans          &trans
-&trans  &trans  &none         &none         &kp C_VOL_DN  &kp C_BRI_DN  &trans   &trans         &none   &kp C_MUTE  &none     &trans      &bt BT_CLR      &trans
-&trans  &trans  &trans        &trans        &trans        &trans        &trans   &trans         &trans  &trans      &trans    &trans      &bt BT_CLR_ALL  &trans
+&trans  &trans  &trans        &trans        &trans        &trans                        &trans  &trans      &trans    &trans      &trans          &trans
+&trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none                         &trans  &none       &none     &kp PSCRN   &screenshot     &trans
+&trans  &trans  &none         &none         &kp C_VOL_UP  &kp C_BRI_UP  &trans  &trans  &none   &kp C_PREV  &kp C_PP  &kp C_NEXT  &trans          &trans
+&trans  &trans  &none         &none         &kp C_VOL_DN  &kp C_BRI_DN  &trans  &trans  &none   &kp C_MUTE  &none     &trans      &bt BT_CLR      &trans
+&trans  &trans  &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans      &trans    &trans      &bt BT_CLR_ALL  &trans
             >;
         };
 
         mouse {
             display-name = "mouse";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                &trans  &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &none   &none   &none   &trans                                &trans  &mkp MB5   &none      &none      &none   &trans
-&trans  &trans  &trans  &trans  &none   &none   &trans        &trans          &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans
-&trans  &trans  &trans  &trans  &none   &none   &trans        &trans          &trans  &mkp MB4   &trans     &trans     &none   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans  &trans  &trans     &trans     &none      &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans     &trans     &trans  &trans
+&trans  &trans  &none   &none   &none   &trans                  &trans  &mkp MB5   &none      &none      &none   &trans
+&trans  &trans  &trans  &trans  &none   &none   &trans  &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans
+&trans  &trans  &trans  &trans  &none   &none   &trans  &trans  &trans  &mkp MB4   &trans     &trans     &none   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &none   &trans
             >;
         };
 
         scroll {
             display-name = "scroll";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                &trans  &trans       &trans  &trans        &trans  &trans
-&trans  &trans  &none   &none   &none   &trans                                &trans  &none        &trans  &trans        &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans          &trans  &m_tab_left  &none   &m_tab_right  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans          &trans  &none        &trans  &trans        &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans  &trans  &trans       &trans  &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans       &trans  &trans        &trans  &trans
+&trans  &trans  &none   &none   &none   &trans                  &trans  &none        &trans  &trans        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &m_tab_left  &none   &m_tab_right  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &none        &trans  &trans        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans        &trans  &trans
             >;
         };
-
     };
 };
 
-&trackball {
-    scroll-layers = <6>;
-};
+&trackball { scroll-layers = <6>; };
 
-&zip_temp_layer {
-    excluded-positions = <19 33 34 35 47>;
-};
+&zip_temp_layer { excluded-positions = <19 33 34 35 47>; };
