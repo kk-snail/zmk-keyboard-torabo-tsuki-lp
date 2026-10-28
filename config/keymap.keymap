@@ -6,39 +6,77 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
+    behaviors {
+        hml: homerow_mods_left {
+            compatible = "zmk,behavior-hold-tap";
+            display-name = "HRM 左手";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <180>;
+            quick-tap-ms = <135>;
+            require-prior-idle-ms = <0>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 27 28 29 30 31 33 35 43>;
+            hold-trigger-on-release;
+            bindings = <&kp>, <&kp>;
+        };
+
+        custom: custom {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        combo_1 {
+            timeout-ms = <40>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
+
+        combo_2 {
+            timeout-ms = <40>;
+            key-positions = <26 27>;
+            bindings = <&kp TILDE>;
+        };
+
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         base_layer {
             display-name = "Base";
             bindings = <
-&trans  &trans       &trans       &trans       &trans       &trans                               &trans       &trans  &trans     &trans     &trans     &trans
-&trans  &lt 4 Q      &mt LGUI W   &kp E        &kp R        &kp T                                &kp Y        &kp U   &kp I      &kp O      &kp P      &trans
-&trans  &mt LCTRL A  &mt LCTRL S  &kp D        &kp F        &kp G        &trans       &trans     &kp H        &kp J   &kp K      &kp L      &kp MINUS  &trans
-&trans  &mt LSHFT Z  &mt LSHFT X  &mt LSHFT C  &mt LSHFT V  &mt LSHFT B  &kp FSLH     &kp UNDER  &kp N        &kp M   &kp COMMA  &kp DOT    &kp BSPC   &trans
-&trans  &kp ESC      &kp TAB      &none        &kp LALT     &lt 1 LANG2  &lt 2 SPACE  &kp RET    &lt 3 LANG1  &none   &none      &mkp RCLK  &kp DEL    &trans
+&trans  &trans        &trans        &trans        &trans        &trans                                &trans       &trans  &trans     &trans     &trans     &trans
+&trans  &lt 4 Q       &hml LGUI W   &kp E         &kp R         &kp T                                 &kp Y        &kp U   &kp I      &kp O      &kp P      &trans
+&trans  &hml LCTRL A  &hml LCTRL S  &kp D         &kp F         &kp G         &trans       &trans     &kp H        &kp J   &kp K      &kp L      &kp BSPC   &trans
+&trans  &hml LSHFT Z  &hml LSHFT X  &hml LSHFT C  &hml LSHFT V  &hml LSHFT B  &kp FSLH     &kp MINUS  &kp N        &kp M   &kp COMMA  &kp DOT    &kp DEL    &trans
+&trans  &kp ESC       &kp TAB       &none         &kp LALT      &lt 1 LANG2   &lt 2 SPACE  &kp RET    &lt 3 LANG1  &none   &none      &mkp RCLK  &kp UNDER  &trans
             >;
         };
 
         num {
             display-name = "num";
             bindings = <
-&trans  &trans     &trans  &trans   &trans  &trans                       &trans    &trans     &trans     &trans    &trans    &trans
-&trans  &kp STAR   &kp N7  &kp N8   &kp N9  &kp PLUS                     &none     &none      &none      &none     &none     &trans
-&trans  &kp FSLH   &kp N4  &kp N5   &kp N6  &kp MINUS  &trans    &trans  &kp AT    &kp DLLR   &kp PRCNT  &kp AMPS  &none     &trans
-&trans  &kp CARET  &kp N1  &kp N2   &kp N3  &kp COLON  &kp BSPC  &none   &kp SEMI  &kp COLON  &none      &kp HASH  &kp BSPC  &trans
-&trans  &kp ESC    &kp N0  &kp DOT  &trans  &trans     &trans    &trans  &trans    &none      &none      &none     &kp DEL   &trans
+&trans  &trans     &trans  &trans   &trans    &trans                       &trans    &trans     &trans     &trans    &trans    &trans
+&trans  &kp STAR   &kp N7  &kp N8   &kp N9    &kp PLUS                     &none     &none      &none      &none     &none     &trans
+&trans  &kp FSLH   &kp N4  &kp N5   &kp N6    &kp MINUS  &trans    &trans  &kp AT    &kp DLLR   &kp PRCNT  &kp AMPS  &none     &trans
+&trans  &kp CARET  &kp N1  &kp N2   &kp N3    &kp COLON  &kp BSPC  &none   &kp SEMI  &kp COLON  &none      &kp HASH  &kp BSPC  &trans
+&trans  &kp ESC    &kp N0  &kp DOT  &kp BSPC  &trans     &trans    &trans  &trans    &none      &none      &none     &kp DEL   &trans
             >;
         };
 
         arrow {
             display-name = "arrow";
             bindings = <
-&trans  &trans     &trans    &trans    &trans     &trans                            &trans  &trans  &trans  &trans  &trans     &trans
-&trans  &none      &kp LGUI  &kp UP    &none      &none                             &trans  &trans  &trans  &trans  &trans     &trans
-&trans  &none      &kp LEFT  &kp DOWN  &kp RIGHT  &none   &trans        &trans      &trans  &trans  &trans  &trans  &kp TILDE  &trans
-&trans  &kp LSHFT  &none     &none     &none      &none   &kp LS(FSLH)  &kp LS(N1)  &trans  &trans  &trans  &trans  &trans     &trans
-&trans  &none      &none     &none     &trans     &trans  &trans        &trans      &trans  &trans  &trans  &trans  &trans     &trans
+&trans  &trans     &trans    &trans    &trans     &trans                              &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &none      &kp LGUI  &kp UP    &none      &none                               &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &none      &kp LEFT  &kp DOWN  &kp RIGHT  &none   &trans        &trans        &trans  &trans  &trans  &trans  &none   &trans
+&trans  &kp LSHFT  &none     &none     &none      &none   &kp LS(FSLH)  &kp LS(EXCL)  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &none      &none     &none     &trans     &trans  &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
