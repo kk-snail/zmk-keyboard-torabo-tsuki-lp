@@ -6,7 +6,14 @@
 #include <dt-bindings/zmk/input_transform.h>
 
 &pointing_listener {
+    /* 通常時のポインティング動作（xy反転） */
     input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+
+    /* Pキー長押し（Layer 6）の時だけトラックボール移動をスクロールに変換 */
+    scroll {
+        layers = <6>;
+        input-processors = <&zip_xy_to_scroll_mapper>;
+    };
 };
 
 &size_s_transform {
