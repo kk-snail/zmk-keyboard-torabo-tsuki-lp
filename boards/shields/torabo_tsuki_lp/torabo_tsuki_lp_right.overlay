@@ -6,24 +6,23 @@
 #include <dt-bindings/zmk/input_transform.h>
 
 &pointing_listener {
-    /* 通常時のポインティング動作（xy反転） */
-    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+    /* 通常時（オートマウス）：座標反転 ＋ 自動的に Layer 5（10秒保持）へ一時切り替え */
+    input-processors = 
+        <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+        <&zip_temp_layer 5 10000>;
 
-    /* Pキー長押し（Layer 6）の時だけトラックボール移動をスクロールに変換 */
+    /* Pキー長押し（Layer 6）：トラックボール移動をスクロールに変換 */
     scroll {
         layers = <6>;
         input-processors = <&zip_xy_to_scroll_mapper>;
     };
 };
 
-&size_s_transform {
-    col-offset = <7>;
-};
+&size_s_transform { col-offset = <7>; };
+&size_m_transform { col-offset = <7>; };
+&size_l_transform { col-offset = <7>; };
 
-&size_m_transform {
-    col-offset = <7>;
-};
-
-&size_l_transform {
-    col-offset = <7>;
+/* オートマウス起動中でもレイヤーが自動解除されないキー位置（クリックキー等） */
+&zip_temp_layer {
+    excluded-positions = <19 33 34 35 47>;
 };
