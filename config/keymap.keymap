@@ -1,104 +1,68 @@
+// tsuki-keymap-bench: combo / hold-trigger positions use the S layout numbering
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
-// #if defined(TORABO_TSUKI_LP_INPUT_HIRES_DIAL)
-// #include <behaviors/hires_dial.dtsi>
-// #endif
-
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        bt_clear {
-            bindings = <&bt BT_CLR>;
-            key-positions = <28 29>;
-            layers = <2>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
-        layer_0 {
+        base_layer {
+            display-name = "Base";
             bindings = <
-&kp ESC    &kp N1     &kp N2    &kp N3    &kp N4    &kp N5                                                         &kp N6       &kp N7    &kp N8     &kp N9    &kp N0                &kp BSPC
-&kp TAB    &kp Q      &kp W     &kp E     &kp R     &kp T                                                          &kp Y        &kp U     &kp I      &kp O     &kp P                 &kp BSPC
-&kp CAPS   &kp A      &kp S     &kp D     &kp F     &kp G        &mkp LCLK                  &mkp RCLK              &kp H        &kp J     &kp K      &kp L     &kp SEMI              &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V     &kp B        &kp SPACE                  &kp RET                &kp N        &kp M     &kp COMMA  &kp DOT   &mt RIGHT_SHIFT FSLH  &kp RSHFT
-&kp LCTRL  &kp LCTRL  &kp LGUI  &kp LALT  &kp BSPC  &lt 2 SPACE  &mt LEFT_SHIFT LANGUAGE_1  &mt RSHIFT LANGUAGE_2  &lt 3 ENTER  &kp BSPC  &kp RALT   &kp RGUI  &kp RCTRL             &kp RCTRL
-#if defined(TORABO_TSUKI_LP_KSCAN_4_DIRECTION_SWITCH)
-&msc SCRL_UP &msc SCRL_DOWN &msc SCRL_LEFT &msc SCRL_RIGHT &mkp MCLK
-#elif defined(TORABO_TSUKI_LP_INPUT_HIRES_DIAL)
-&mkp MCLK
-#endif
+&trans  &trans       &trans       &trans       &trans       &trans                               &trans       &trans  &trans     &trans     &trans     &trans
+&trans  &lt 4 Q      &mt LGUI W   &kp E        &kp R        &kp T                                &kp Y        &kp U   &kp I      &kp O      &kp P      &trans
+&trans  &mt LCTRL A  &mt LCTRL S  &kp D        &kp F        &kp G        &trans       &trans     &kp H        &kp J   &kp K      &kp L      &kp MINUS  &trans
+&trans  &mt LSHFT Z  &mt LSHFT X  &mt LSHFT C  &mt LSHFT V  &mt LSHFT B  &kp FSLH     &kp UNDER  &kp N        &kp M   &kp COMMA  &kp DOT    &kp BSPC   &trans
+&trans  &kp ESC      &kp TAB      &none        &kp LALT     &lt 1 LANG2  &lt 2 SPACE  &kp RET    &lt 3 LANG1  &none   &none      &mkp RCLK  &kp DEL    &trans
             >;
         };
 
-        layer_1 {
+        num {
+            display-name = "num";
             bindings = <
-&trans  &trans  &trans  &trans     &trans     &trans                  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans                  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
-#if defined(TORABO_TSUKI_LP_KSCAN_4_DIRECTION_SWITCH)
-&msc SCRL_UP &msc SCRL_DOWN &msc SCRL_LEFT &msc SCRL_RIGHT &mkp MCLK
-#elif defined(TORABO_TSUKI_LP_INPUT_HIRES_DIAL)
-&mkp MCLK
-#endif
-&trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans     &trans  &trans   &trans  &trans                       &trans    &trans     &trans     &trans    &trans    &trans
+&trans  &kp STAR   &kp N7  &kp N8   &kp N9  &kp PLUS                     &none     &none      &none      &none     &none     &trans
+&trans  &kp FSLH   &kp N4  &kp N5   &kp N6  &kp MINUS  &trans    &trans  &kp AT    &kp DLLR   &kp PRCNT  &kp AMPS  &none     &trans
+&trans  &kp CARET  &kp N1  &kp N2   &kp N3  &kp COLON  &kp BSPC  &none   &kp SEMI  &kp COLON  &none      &kp HASH  &kp BSPC  &trans
+&trans  &kp ESC    &kp N0  &kp DOT  &trans  &trans     &trans    &trans  &trans    &none      &none      &none     &kp DEL   &trans
             >;
         };
 
-        layer_2 {
+        arrow {
+            display-name = "arrow";
             bindings = <
-&trans  &trans            &trans            &trans      &trans      &trans                      &trans          &trans         &trans            &trans             &trans         &trans
-&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                  &kp LS(N6)      &kp LS(N7)     &kp LS(N8)        &kp LS(N9)         &kp LS(N0)     &trans
-&trans  &kp N1            &kp N2            &kp N3      &kp N4      &kp N5      &trans  &trans  &kp LEFT_BRACE  &kp MINUS      &kp EQUAL         &kp RIGHT_BRACE    &kp COLON      &trans
-&trans  &kp N6            &kp N7            &kp N8      &kp N9      &kp N0      &trans  &trans  &kp LS(MINUS)   &kp LS(EQUAL)  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &trans
-&trans  &trans            &trans            &trans      &trans      &trans      &trans  &trans  &kp TAB         &kp DEL        &trans            &trans             &trans         &trans
-#if defined(TORABO_TSUKI_LP_KSCAN_4_DIRECTION_SWITCH)
-&msc SCRL_UP &msc SCRL_DOWN &msc SCRL_LEFT &msc SCRL_RIGHT &mkp MCLK
-#elif defined(TORABO_TSUKI_LP_INPUT_HIRES_DIAL)
-&kp C_MUTE
-#endif
+&trans  &trans     &trans    &trans    &trans     &trans                            &trans  &trans  &trans  &trans  &trans     &trans
+&trans  &none      &kp LGUI  &kp UP    &none      &none                             &trans  &trans  &trans  &trans  &trans     &trans
+&trans  &none      &kp LEFT  &kp DOWN  &kp RIGHT  &none   &trans        &trans      &trans  &trans  &trans  &trans  &kp TILDE  &trans
+&trans  &kp LSHFT  &none     &none     &none      &none   &kp LS(FSLH)  &kp LS(N1)  &trans  &trans  &trans  &trans  &trans     &trans
+&trans  &none      &none     &none     &trans     &trans  &trans        &trans      &trans  &trans  &trans  &trans  &trans     &trans
             >;
         };
 
-        layer_3 {
+        skopki {
+            display-name = "skopki";
             bindings = <
-&trans  &trans   &trans   &trans        &trans        &trans                      &trans            &trans     &trans         &trans     &trans      &trans
-&trans  &kp F1   &kp F2   &kp F3        &kp F4        &kp F5                      &kp HOME          &kp PG_UP  &kp PAGE_DOWN  &kp END    &kp ESCAPE  &trans
-&trans  &kp F6   &kp F7   &kp F8        &kp F9        &kp F10     &trans  &trans  &kp LEFT          &kp DOWN   &kp UP_ARROW   &kp RIGHT  &kp TAB     &trans
-&trans  &kp F11  &kp F12  &out OUT_USB  &out OUT_BLE  &bt BT_NXT  &trans  &trans  &kp SINGLE_QUOTE  &kp DQT    &kp GRAVE      &kp TILDE  &kp PIPE    &trans
-&trans  &trans   &trans   &trans        &kp DELETE    &kp TAB     &trans  &trans  &trans            &trans     &trans         &trans     &trans      &trans
-#if defined(TORABO_TSUKI_LP_KSCAN_4_DIRECTION_SWITCH)
-&msc SCRL_UP &msc SCRL_DOWN &msc SCRL_LEFT &msc SCRL_RIGHT &mkp MCLK
-#elif defined(TORABO_TSUKI_LP_INPUT_HIRES_DIAL)
-&hires_dial_radial_controller_button
-#endif
+&trans  &trans  &trans  &trans  &trans  &trans                   &trans       &trans        &trans        &trans  &trans  &trans
+&trans  &trans  &kp F7  &kp F8  &kp F9  &kp F12                  &trans       &kp LS(RBKT)  &kp LS(BSLH)  &trans  &trans  &trans
+&trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans  &trans  &kp LS(DQT)  &kp LPAR      &kp LS(RPAR)  &none   &none   &trans
+&trans  &none   &kp F1  &kp F2  &kp F3  &kp F10  &none   &none   &kp SQT      &kp RBKT      &kp BSLH      &none   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans       &trans        &trans        &trans  &trans  &trans
             >;
         };
+
+        function {
+            display-name = "function";
+            bindings = <
+&trans  &trans  &trans        &trans        &trans        &trans                        &trans  &trans      &trans    &trans      &trans          &trans
+&trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans                        &trans  &none       &none     &kp PSCRN   &trans          &trans
+&trans  &trans  &trans        &trans        &kp C_VOL_UP  &kp C_BRI_UP  &trans  &trans  &none   &kp C_PREV  &kp C_PP  &kp C_NEXT  &trans          &trans
+&trans  &trans  &trans        &trans        &kp C_VOL_DN  &kp C_BRI_DN  &trans  &trans  &none   &kp C_MUTE  &none     &trans      &bt BT_CLR      &trans
+&trans  &trans  &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans      &trans    &trans      &bt BT_CLR_ALL  &trans
+            >;
+        };
+
     };
 };
-
-#if defined(TORABO_TSUKI_LP_INPUT_HIRES_DIAL)
-&{/keymap/layer_0} {
-    sensor-bindings = <&hires_dial_scroll 1 1>;
-};
-
-&{/keymap/layer_1} {
-    sensor-bindings = <&hires_dial_scroll 10 1>;
-};
-
-&{/keymap/layer_2} {
-    sensor-bindings = <&hires_dial_encoder C_VOL_UP C_VOL_DN>;
-};
-
-&{/keymap/layer_3} {
-    /* Quarter-speed Radial Controller motion: output/input = 1/4. */
-    sensor-bindings = <&hires_dial_radial_controller 4 1>;
-};
-#endif
