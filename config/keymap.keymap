@@ -23,7 +23,7 @@
         screenshot: screenshot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LA(G))>;
+            bindings = <&kp LC(LA(S))>;
         };
 
         m_win_left: m_win_left {
