@@ -4,10 +4,6 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: sekigon-gonnoc
       url-base: https://github.com/sekigon-gonnoc
-    # ★ 追記箇所 1 (remotes の末尾に追加)
-    - name: bunnyspa
-      url-base: https://github.com/bunnyspa
-
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -35,10 +31,5 @@ manifest:
       remote: sekigon-gonnoc
     - name: zmk-driver-hires-dial
       remote: sekigon-gonnoc
-    # ★ 追記箇所 2 (projects の末尾、self の直前に追加)
-    - name: zmk-input-processor-temp-layer
-      remote: bunnyspa
-      revision: main
-
   self:
     path: config
