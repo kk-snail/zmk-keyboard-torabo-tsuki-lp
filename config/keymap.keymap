@@ -20,10 +20,40 @@
             bindings = <&kp>, <&kp>;
         };
 
-        custom: custom {
+        screenshot: screenshot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp A>;
+            bindings = <&kp LC(LA(G))>;
+        };
+
+        m_win_left: m_win_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LEFT)>;
+        };
+
+        m_win_right: m_win_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(RIGHT)>;
+        };
+
+        m_win_third_left: m_win_third_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LA(LEFT))>;
+        };
+
+        m_win_third_center: m_win_third_center {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LA(DOWN))>;
+        };
+
+        m_win_third_right: m_win_third_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LA(RIGHT))>;
         };
     };
 
@@ -72,11 +102,11 @@
         arrow {
             display-name = "arrow";
             bindings = <
-&trans  &trans     &trans    &trans    &trans     &trans                              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &none      &kp LGUI  &kp UP    &none      &none                               &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &none      &kp LEFT  &kp DOWN  &kp RIGHT  &none   &trans        &trans        &trans  &trans  &trans  &trans  &none   &trans
-&trans  &kp LSHFT  &none     &none     &none      &none   &kp LS(FSLH)  &kp LS(EXCL)  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &none      &none     &none     &trans     &trans  &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans             &trans               &trans              &trans                                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &m_win_left  &kp LGUI           &kp UP               &none               &m_win_right                              &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &none        &kp LEFT           &kp DOWN             &kp RIGHT           &none         &trans        &trans        &trans  &trans  &trans  &trans  &none   &trans
+&trans  &kp LSHFT    &m_win_third_left  &m_win_third_center  &m_win_third_right  &none         &kp LS(FSLH)  &kp LS(EXCL)  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &none        &none              &none                &trans              &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -95,7 +125,7 @@
             display-name = "function";
             bindings = <
 &trans  &trans  &trans        &trans        &trans        &trans                        &trans  &trans      &trans    &trans      &trans          &trans
-&trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans                        &trans  &none       &none     &kp PSCRN   &trans          &trans
+&trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans                        &trans  &none       &none     &kp PSCRN   &screenshot     &trans
 &trans  &trans  &trans        &trans        &kp C_VOL_UP  &kp C_BRI_UP  &trans  &trans  &none   &kp C_PREV  &kp C_PP  &kp C_NEXT  &trans          &trans
 &trans  &trans  &trans        &trans        &kp C_VOL_DN  &kp C_BRI_DN  &trans  &trans  &none   &kp C_MUTE  &none     &trans      &bt BT_CLR      &trans
 &trans  &trans  &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans      &trans    &trans      &bt BT_CLR_ALL  &trans
