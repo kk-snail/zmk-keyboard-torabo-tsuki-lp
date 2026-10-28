@@ -102,22 +102,22 @@
         arrow {
             display-name = "arrow";
             bindings = <
-&trans  &trans       &trans             &trans               &trans              &trans                                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &m_win_left  &kp LGUI           &kp UP               &none               &m_win_right                              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &none        &kp LEFT           &kp DOWN             &kp RIGHT           &none         &trans        &trans        &trans  &trans  &trans  &trans  &none   &trans
-&trans  &kp LSHFT    &m_win_third_left  &m_win_third_center  &m_win_third_right  &none         &kp LS(FSLH)  &kp LS(EXCL)  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &none        &none              &none                &trans              &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans             &trans               &trans              &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &m_win_left  &kp LGUI           &kp UP               &none               &m_win_right                            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &none        &kp LEFT           &kp DOWN             &kp RIGHT           &none         &trans        &trans      &trans  &trans  &trans  &trans  &none   &trans
+&trans  &kp LSHFT    &m_win_third_left  &m_win_third_center  &m_win_third_right  &none         &kp LS(FSLH)  &kp LS(N1)  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &none        &none              &none                &trans              &trans        &trans        &trans      &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         skopki {
             display-name = "skopki";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                   &trans       &trans        &trans        &trans  &trans  &trans
-&trans  &trans  &kp F7  &kp F8  &kp F9  &kp F12                  &trans       &kp LS(RBKT)  &kp LS(BSLH)  &trans  &trans  &trans
-&trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans  &trans  &kp LS(DQT)  &kp LPAR      &kp LS(RPAR)  &none   &none   &trans
-&trans  &none   &kp F1  &kp F2  &kp F3  &kp F10  &none   &none   &kp SQT      &kp RBKT      &kp BSLH      &none   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans       &trans        &trans        &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                   &trans      &trans        &trans        &trans  &trans  &trans
+&trans  &trans  &kp F7  &kp F8  &kp F9  &kp F12                  &trans      &kp LS(RBKT)  &kp LS(BSLH)  &trans  &trans  &trans
+&trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans  &trans  &kp LS(N2)  &kp LS(N8)    &kp LS(N9)    &none   &none   &trans
+&trans  &none   &kp F1  &kp F2  &kp F3  &kp F10  &none   &none   &kp LS(N7)  &kp RBKT      &kp BSLH      &none   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans      &trans        &trans        &trans  &trans  &trans
             >;
         };
 
