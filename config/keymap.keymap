@@ -168,7 +168,7 @@
             display-name = "scroll";
             bindings = <
 &trans  &trans  &trans             &trans               &trans              &trans                     &trans  &trans       &trans        &trans        &trans  &trans
-&trans  &trans  &m_win_left        &kp LG(UP)           &m_win_right        &trans                     &trans  &mkp MB5     &kp LC(T)     &trans        &trans  &trans
+&trans  &trans  &m_win_left        &kp LG(UP)           &m_win_right        &trans                     &trans  &mkp MB5     &kp LC(T)     &kp F5        &trans  &trans
 &trans  &trans  &m_win_third_left  &m_win_third_center  &m_win_third_right  &trans  &trans  &trans     &trans  &m_tab_left  &kp LC(W)     &m_tab_right  &trans  &trans
 &trans  &trans  &trans             &trans               &trans              &trans  &trans  &trans     &trans  &mkp MB4     &kp LG(DOWN)  &trans        &trans  &trans
 &trans  &trans  &trans             &trans               &trans              &trans  &trans  &kp LC(L)  &trans  &trans       &trans        &trans        &trans  &trans
