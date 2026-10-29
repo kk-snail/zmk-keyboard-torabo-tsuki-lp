@@ -16,7 +16,7 @@
     scroll {
         layers = <6>;
         input-processors = 
-        <&zip_xy_to_scroll_mapper>;
+        <&zip_xy_to_scroll_mapper>,
         <&zip_scroll_scaler 3 4>; /* ★ スクロール感度: 0.5倍（半分） */
     };
 };
