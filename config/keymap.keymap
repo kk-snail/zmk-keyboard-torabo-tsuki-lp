@@ -1,5 +1,4 @@
 // tsuki-keymap-bench: combo / hold-trigger positions use the S layout numbering
-
 #include <input/processors.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -68,6 +67,15 @@
             #binding-cells = <0>;
             bindings = <&kp LC(TAB)>;
         };
+
+        custom: custom {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A>;
+        };
+    };
+
+    macros {
     };
 
     combos {
@@ -81,12 +89,10 @@
 
         combo_2 {
             timeout-ms = <40>;
-            key-positions = <45 46>;
+            key-positions = <>;
             bindings = <&kp LS(EQUAL)>;
         };
-    };
 
-    macros {
     };
 
     keymap {
@@ -117,11 +123,11 @@
         arrow {
             display-name = "arrow";
             bindings = <
-&trans  &trans       &trans             &trans               &trans              &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &m_win_left  &kp LGUI           &kp UP               &none               &m_win_right                            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &none        &kp LEFT           &kp DOWN             &kp RIGHT           &none         &trans        &trans      &trans  &trans  &trans  &trans  &none   &trans
-&trans  &kp LSHFT    &m_win_third_left  &m_win_third_center  &m_win_third_right  &none         &kp LS(FSLH)  &kp LS(N1)  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &none        &none              &none                &none               &trans        &trans        &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans    &trans    &trans     &trans                            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &none      &kp LGUI  &kp UP    &none      &none                             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &none      &kp LEFT  &kp DOWN  &kp RIGHT  &none   &trans        &trans      &trans  &trans  &trans  &trans  &none   &trans
+&trans  &kp LSHFT  &none     &none     &none      &none   &kp LS(FSLH)  &kp LS(N1)  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &none      &none     &none     &none      &trans  &trans        &trans      &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -161,12 +167,13 @@
         scroll {
             display-name = "scroll";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans       &trans  &trans        &trans  &trans
-&trans  &trans  &none   &none   &none   &trans                  &trans  &none        &trans  &trans        &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &m_tab_left  &none   &m_tab_right  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &none        &trans  &trans        &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans        &trans  &trans
+&trans  &trans  &trans             &trans               &trans              &trans                     &trans  &trans       &trans        &trans        &trans  &trans
+&trans  &trans  &m_win_left        &kp LG(UP)           &m_win_right        &trans                     &trans  &trans       &kp LC(T)     &trans        &trans  &trans
+&trans  &trans  &m_win_third_left  &m_win_third_center  &m_win_third_right  &trans  &trans  &trans     &trans  &m_tab_left  &kp LC(W)     &m_tab_right  &trans  &trans
+&trans  &trans  &trans             &trans               &trans              &trans  &trans  &trans     &trans  &trans       &kp LG(DOWN)  &trans        &trans  &trans
+&trans  &trans  &trans             &trans               &trans              &trans  &trans  &kp LC(L)  &trans  &trans       &trans        &trans        &trans  &trans
             >;
         };
+
     };
 };
