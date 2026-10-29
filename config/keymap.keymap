@@ -93,6 +93,11 @@
             key-positions = <45 46>;
             bindings = <&kp LS(TILDE)>;
         };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <28 29>;
+        };
     };
 
     keymap {
@@ -105,7 +110,7 @@
 &trans  &lt 4 Q       &kp W         &kp E         &kp R         &kp T                                 &kp Y        &kp U   &kp I      &kp O    &lt 6 P    &trans
 &trans  &hml LCTRL A  &hml LCTRL S  &kp D         &kp F         &kp G         &trans       &trans     &kp H        &kp J   &kp K      &kp L    &kp BSPC   &trans
 &trans  &hml LSHFT Z  &hml LSHFT X  &hml LSHFT C  &hml LSHFT V  &hml LSHFT B  &kp FSLH     &kp MINUS  &kp N        &kp M   &kp COMMA  &kp DOT  &kp DEL    &trans
-&trans  &kp ESC       &kp TAB       &kp LEFT_ALT  &kp LGUI      &lt 1 LANG2   &lt 2 SPACE  &kp RET    &lt 3 LANG1  &none   &none      &none    &kp UNDER  &trans
+&trans  &kp ESC       &kp TAB       &kp LEFT_ALT  &kp LGUI      &lt 1 LANG2   &lt 2 SPACE  &kp RET    &lt 3 LANG1  &none   &none      &none    &kp EQUAL  &trans
             >;
         };
 
@@ -116,7 +121,7 @@
 &trans  &kp KP_MULTIPLY  &kp N7  &kp N8   &kp N9    &kp KP_PLUS                     &none     &none      &none      &none     &none   &trans
 &trans  &kp KP_DIVIDE    &kp N4  &kp N5   &kp N6    &kp KP_MINUS  &trans    &trans  &kp AT    &kp DLLR   &kp PRCNT  &kp AMPS  &none   &trans
 &trans  &kp CARET        &kp N1  &kp N2   &kp N3    &kp COLON     &kp BSPC  &none   &kp SEMI  &kp COLON  &none      &kp HASH  &none   &trans
-&trans  &kp KP_EQUAL     &kp N0  &kp DOT  &kp BSPC  &trans        &trans    &trans  &trans    &none      &none      &none     &none   &trans
+&trans  &kp EQUAL        &kp N0  &kp DOT  &kp BSPC  &trans        &trans    &trans  &trans    &none      &none      &none     &none   &trans
             >;
         };
 
