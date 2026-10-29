@@ -82,12 +82,7 @@
         combo_2 {
             timeout-ms = <40>;
             key-positions = <45 46>;
-            bindings = <&kp LS(A)>;
-        };
-
-        tilde {
-            bindings = <&kp LS(KP_EQUAL)>;
-            key-positions = <33 34>;
+            bindings = <&kp LS(EQUAL)>;
         };
     };
 
