@@ -84,6 +84,11 @@
             key-positions = <45 46>;
             bindings = <&kp LS(KP_EQUAL)>;
         };
+
+        tilde {
+            bindings = <&kp LS(KP_EQUAL)>;
+            key-positions = <33 34>;
+        };
     };
 
     macros {
