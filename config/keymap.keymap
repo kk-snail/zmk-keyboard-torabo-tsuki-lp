@@ -96,7 +96,7 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <28 29>;
+            key-positions = <28 27>;
         };
     };
 
