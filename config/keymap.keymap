@@ -70,7 +70,6 @@
         };
     };
 
-
     combos {
         compatible = "zmk,combos";
 
@@ -83,7 +82,7 @@
         combo_2 {
             timeout-ms = <40>;
             key-positions = <45 46>;
-            bindings = <&kp TILDE>;
+            bindings = <&kp LS(KP_EQUAL)>;
         };
     };
 
@@ -171,4 +170,3 @@
         };
     };
 };
-
