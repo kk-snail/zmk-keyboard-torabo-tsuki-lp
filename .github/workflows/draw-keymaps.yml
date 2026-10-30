@@ -1,7 +1,7 @@
 name: Draw ZMK keymaps
 on:
-  workflow_dispatch: # Actions タブからの手動実行用
-  push: # キーマップ定義が更新されたら自動で描画
+  workflow_dispatch: # 手動実行用
+  push:
     paths:
       - "config/*.keymap"
       - "config/*.dtsi"
@@ -11,7 +11,8 @@ jobs:
   draw:
     uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
     permissions:
-      contents: write # 自動コミットに必要な書き込み権限
+      contents: write
     with:
       keymap_patterns: "config/*.keymap"
       commit_message: "[Draw] Update keymap diagram"
+      fail_on_error: true # エラー発生時にどこで失敗したかログを出力する
