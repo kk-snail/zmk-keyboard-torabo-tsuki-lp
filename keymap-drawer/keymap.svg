@@ -138,15 +138,6 @@ svg.keymap {
   font-family: "Inter", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
   font-weight: 600;
 }
-/* 無効キー (&none) や 透過キー (&trans / ghost) の枠のみ安全に非表示 */
-.key.none,
-.key.trans,
-.key.ghost,
-g.key.none,
-g.key.trans,
-g.key.ghost {
-  display: none !important;
-}
 </style>
 <g transform="translate(30, 0)" class="layer-Base">
 <text x="0" y="28" class="label" id="Base">Base:</text>
