@@ -1,3 +1,6 @@
+## Keymap Diagram
+
+![Keymap Diagram](keymap-drawer/keymap.svg)
 
 [torabo-tsuki LP](https://github.com/sekigon-gonnoc/torabo-tsuki-lp)用のZMKファームウェア
 
