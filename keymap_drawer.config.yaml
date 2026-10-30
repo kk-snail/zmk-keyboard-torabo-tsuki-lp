@@ -16,25 +16,40 @@ draw_config:
       display: none !important;
     }
 
-# --- パース・表記設定 --
+# --- パース・表記設定 ---
+parse_config:
   zmk_keycode_map:
-    # --- XML安全エスケープ表記（? / ! / " / ' / < / > / &） ---
-    LS(FSLH): "?"
-    LS(SLASH): "?"
+    # --- 画像内テキストの簡略化（パース結果文字列ダイレクト指定） ---
+    "Ctl+W": "Ctrl W"
+    "Ctl+T": "Ctrl T"
+    "Ctl+L": "Ctrl L"
+    "Ctl+TAB": "Tab ►"
+    "Ctl+Sft+TAB": "Tab ◄"
+
+    "Gui+LEFT": "Win ◄"
+    "Gui+UP": "Win ▲"
+    "Gui+RIGHT": "Win ►"
+    "Gui+DOWN": "Win ▼"
+    "Sft+Gui+LEFT": "⇧ Win ◄"
+    "Gui+Alt+LEFT": "Win Alt ◄"
+    "Gui+Alt+DOWN": "Win Alt ▼"
+    "Gui+Alt+RIGHT": "Win Alt ►"
+    "Sft+Gui+RIGHT": "⇧ Win ►"
+
+    "Gui+W": "Cmd W"
+    "Gui+T": "Cmd T"
+    "Gui+R": "Cmd R"
+    "Gui+H": "Cmd H"
+    "Gui+L": "Cmd L"
+    "Gui+]": "Cmd ]"
+    "Gui+[": "Cmd ["
+
+    # --- 記号・Shift複合 ---
     "Sft+/": "?"
-    "Sft + /": "?"
-
-    LS(N1): "!"
-    LS(NUMBER_1): "!"
     "Sft+1": "!"
-    "Sft + 1": "!"
-
-    LS(SQT): "&quot;"
-    LS(SINGLE_QUOTE): "&quot;"
-    LS(APOSTROPHE): "&quot;"
     'Sft+"': "&quot;"
-    'Sft + "': "&quot;"
     "Sft+DQT": "&quot;"
+    "Sft+~": "~"
 
     SQT: "'"
     SINGLE_QUOTE: "'"
@@ -44,37 +59,32 @@ draw_config:
     LT: "&lt;"
     GT: "&gt;"
 
-    # --- 独自マクロ・マウス・特殊ボタン ---
-    "&mkp MB5": "MB5 (進む)"
-    "&mkp MB4": "MB4 (戻る)"
+    # --- マクロ / マウスボタン短縮 ---
+    "&mkp MB5": "MB5"
+    "&mkp MB4": "MB4"
     "&m_ipad_left": "iPad ◄"
     "&m_ipad_full": "iPad 🔲"
     "&m_ipad_right": "iPad ►"
     "&m_globe_up": "🌐 ▲"
 
-    # --- ショートカット / 複合修飾キー ---
-    LC(LS(TAB)): "Tab ◄"
+    # --- 予備：ZMK生コード表記マッピング ---
+    LC(W): "Ctrl W"
+    LC(T): "Ctrl T"
+    LC(L): "Ctrl L"
     LC(TAB): "Tab ►"
+    LC(LS(TAB)): "Tab ◄"
     LG(LEFT): "Win ◄"
-    LG(RIGHT): "Win ►"
     LG(UP): "Win ▲"
+    LG(RIGHT): "Win ►"
     LG(DOWN): "Win ▼"
     LG(W): "Cmd W"
     LG(T): "Cmd T"
     LG(R): "Cmd R"
     LG(H): "Cmd H"
     LG(L): "Cmd L"
+    LG(RBKT): "Cmd ]"
+    LG(LBKT): "Cmd ["
     LS(TILDE): "~"
-
-    Sft+Gui+LEFT: "⇧ Win ◄"
-    Gui+Alt+LEFT: "Win Alt ◄"
-    Gui+Alt+DOWN: "Win Alt ▼"
-    Gui+Alt+RIGHT: "Win Alt ►"
-    Sft+Gui+RIGHT: "⇧ Win ►"
-
-    # カッコ・ショートカット
-    Gui+RBKT: "Cmd ]"
-    Gui+LBKT: "Cmd ["
 
     # --- 基本記号 ---
     MINUS: "-"
