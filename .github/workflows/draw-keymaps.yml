@@ -14,6 +14,6 @@ jobs:
       contents: write
     with:
       keymap_patterns: "config/*.keymap"
-      parse_args: "keymap:'-c 12'" # 12列グリッドとしてパース
-      draw_args: "keymap:'-n 555555 555555'" # 左右6列×5行のオルソレイアウトで描画
+      parse_args: "keymap:'-c 12'"
+      draw_args: "keymap:'-n 555555_555555'" # スペースをアンダースコア(_)に置き換えてシェルエラーを回避
       commit_message: "[Draw] Update keymap diagram"
