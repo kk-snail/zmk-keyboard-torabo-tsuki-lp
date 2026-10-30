@@ -45,12 +45,12 @@ layers:
     - {t: C, h: LSHFT}
   - - {t: V, h: LSHFT}
     - {t: B, h: LSHFT}
-    - /
-    - '-'
+    - FSLH
+    - MINUS
     - N
     - M
-    - ','
-    - .
+    - COMMA
+    - DOT
     - DEL
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -65,7 +65,7 @@ layers:
     - ''
     - ''
     - ''
-    - '='
+    - EQUAL
     - {t: ▽, type: trans}
   num:
   - - {t: ▽, type: trans}
@@ -100,10 +100,10 @@ layers:
     - KP MINUS
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - '@'
-    - $
-    - '%'
-    - '&'
+    - AT
+    - DLLR
+    - PRCNT
+    - AMPS
     - ''
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -112,18 +112,18 @@ layers:
     - '2'
   - - '3'
     - KP DOT
-    - ':'
+    - COLON
     - ''
-    - ;
-    - ':'
+    - SEMI
+    - COLON
     - ''
-    - '#'
+    - HASH
     - ''
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - '='
-    - ^
-    - .
+    - EQUAL
+    - CARET
+    - DOT
   - - BSPC
     - {type: held}
     - {t: ▽, type: trans}
@@ -167,10 +167,10 @@ layers:
     - ''
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - '@'
-    - $
-    - '%'
-    - '&'
+    - AT
+    - DOLLAR
+    - PERCENT
+    - AMPERSAND
     - ''
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -179,12 +179,12 @@ layers:
     - ''
   - - ''
     - ''
-    - Sft+/
+    - Sft+FSLH
     - Sft+1
-    - ;
-    - ':'
+    - SEMICOLON
+    - COLON
     - ''
-    - '#'
+    - HASH
     - ''
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -221,8 +221,8 @@ layers:
     - F9
     - F12
     - ''
-    - '{'
-    - '}'
+    - LBRC
+    - RBRC
     - ''
     - ''
     - {t: ▽, type: trans}
@@ -234,11 +234,11 @@ layers:
     - F11
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - Sft+"
-    - (
-    - )
-    - <
-    - '>'
+    - Sft+DQT
+    - LPAR
+    - RPAR
+    - LT
+    - GT
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - ''
@@ -248,9 +248,9 @@ layers:
     - F10
     - ''
     - ''
-    - ''''
-    - '['
-    - ']'
+    - SQT
+    - LBKT
+    - RBKT
     - ''
     - ''
     - {t: ▽, type: trans}
@@ -417,9 +417,9 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - Ctl+W
-  - - Gui+LEFT
-    - Gui+UP
-    - Gui+RIGHT
+  - - Win ◄
+    - Win ▲
+    - Win ►
     - ''
     - ''
     - '&mkp MB5'
@@ -436,8 +436,8 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - ''
-    - Ctl+Sft+TAB
-    - Ctl+TAB
+    - Tab ◄
+    - Tab ►
     - ''
     - ''
     - {t: ▽, type: trans}
@@ -451,7 +451,7 @@ layers:
     - {t: ▽, type: trans}
     - ''
     - '&mkp MB4'
-    - Gui+DOWN
+    - Win ▼
     - ''
     - ''
     - {t: ▽, type: trans}
@@ -483,16 +483,16 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - Gui+W
+    - Cmd W
   - - '&m_ipad_left'
     - '&m_ipad_full'
     - '&m_ipad_right'
     - ''
     - ''
-    - Gui+]
-    - Gui+T
+    - Gui+RBKT
+    - Cmd T
     - {type: held}
-    - Gui+R
+    - Cmd R
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - ''
@@ -503,8 +503,8 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - '&m_globe_up'
-    - Ctl+Sft+TAB
-    - Ctl+TAB
+    - Tab ◄
+    - Tab ►
     - ''
     - ''
     - {t: ▽, type: trans}
@@ -517,8 +517,8 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - ''
-    - Gui+[
-    - Gui+H
+    - Gui+LBKT
+    - Cmd H
     - ''
     - ''
     - {t: ▽, type: trans}
@@ -529,7 +529,7 @@ layers:
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - Gui+L
+    - Cmd L
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -540,6 +540,6 @@ combos:
 - p: [13, 14]
   k: ESC
 - p: [45, 46]
-  k: Sft+~
+  k: '~'
 - p: [28, 27]
   k: TAB
