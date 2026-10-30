@@ -16,12 +16,14 @@
         layers = <6>;
         input-processors = 
         <&zip_xy_to_scroll_mapper>,
+        <&zip_scroll_transform (INPUT_TRANSFORM_X_INVERT)>,
         <&zip_scroll_scaler 1 2>;
     };
     scroll_ipad {
         layers = <7>;
         input-processors = 
         <&zip_xy_to_scroll_mapper>,
+        <&zip_scroll_transform (INPUT_TRANSFORM_X_INVERT)>,
         <&zip_scroll_scaler 1 20>;
     };
 };
