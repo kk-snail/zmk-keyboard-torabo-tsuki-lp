@@ -37,7 +37,7 @@ layers:
   - J
   - K
   - L
-  - BSPC
+  - ⌫
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: Z, h: LSHFT}
@@ -54,13 +54,13 @@ layers:
   - DEL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ESC
-  - TAB
+  - Esc
+  - ⇥
   - LEFT ALT
   - LGUI
   - {t: LANG2, h: num}
-  - {t: SPACE, h: arrow}
-  - RET
+  - {t: ␣, h: arrow}
+  - ⏎
   - {t: LANG1, h: skopki}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -81,11 +81,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - KP MULTIPLY
+  - '*'
   - '7'
   - '8'
   - '9'
-  - KP PLUS
+  - +
   - ''
   - ''
   - ''
@@ -93,17 +93,17 @@ layers:
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - KP DIVIDE
+  - /
   - '4'
   - '5'
   - '6'
-  - KP MINUS
+  - '-'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '@'
   - $
   - '%'
-  - '&'
+  - '&amp;'
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -111,7 +111,7 @@ layers:
   - '1'
   - '2'
   - '3'
-  - KP DOT
+  - .
   - ':'
   - ''
   - ;
@@ -124,7 +124,7 @@ layers:
   - '='
   - ^
   - .
-  - BSPC
+  - ⌫
   - {type: held}
   - ''
   - ''
@@ -150,7 +150,7 @@ layers:
   - {t: ▽, type: trans}
   - ''
   - ''
-  - UP
+  - ↑
   - ''
   - ''
   - ''
@@ -161,16 +161,16 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  - LEFT
-  - DOWN
-  - RIGHT
+  - ←
+  - ↓
+  - →
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '@'
   - $
   - '%'
-  - '&'
+  - '&amp;'
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -234,11 +234,11 @@ layers:
   - F11
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Sft+"
+  - Sft+&quot;
   - (
   - )
-  - <
-  - '>'
+  - '&lt;'
+  - '&gt;'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
@@ -416,28 +416,28 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Ctl+W
-  - Gui+LEFT
-  - Gui+UP
-  - Gui+RIGHT
+  - Ctrl W
+  - Win ◄
+  - Win ▲
+  - Win ►
   - ''
   - ''
   - '&mkp MB5'
-  - Ctl+T
+  - Ctrl T
   - F5
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Sft+Gui+LEFT
-  - Gui+Alt+LEFT
-  - Gui+Alt+DOWN
-  - Gui+Alt+RIGHT
-  - Sft+Gui+RIGHT
+  - Sft+Gui+←
+  - Gui+Alt+←
+  - Gui+Alt+↓
+  - Gui+Alt+→
+  - Sft+Gui+→
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  - Ctl+Sft+TAB
-  - Ctl+TAB
+  - Tab ◄
+  - Tab ►
   - ''
   - ''
   - {t: ▽, type: trans}
@@ -451,7 +451,7 @@ layers:
   - ''
   - ''
   - '&mkp MB4'
-  - Gui+DOWN
+  - Win ▼
   - ''
   - ''
   - {t: ▽, type: trans}
@@ -462,7 +462,7 @@ layers:
   - ''
   - ''
   - ''
-  - Ctl+L
+  - Ctrl L
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -483,16 +483,16 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Gui+W
+  - Cmd W
   - '&m_ipad_left'
   - '&m_ipad_full'
   - '&m_ipad_right'
   - ''
   - ''
-  - Gui+]
-  - Gui+T
+  - Cmd ]
+  - Cmd T
   - {type: held}
-  - Gui+R
+  - Cmd R
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
@@ -503,8 +503,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&m_globe_up'
-  - Ctl+Sft+TAB
-  - Ctl+TAB
+  - Tab ◄
+  - Tab ►
   - ''
   - ''
   - {t: ▽, type: trans}
@@ -517,8 +517,8 @@ layers:
   - ''
   - ''
   - ''
-  - Gui+[
-  - Gui+H
+  - Cmd [
+  - Cmd H
   - ''
   - ''
   - {t: ▽, type: trans}
@@ -529,7 +529,7 @@ layers:
   - ''
   - ''
   - ''
-  - Gui+L
+  - Cmd L
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -538,11 +538,11 @@ layers:
   - {t: ▽, type: trans}
 combos:
 - p: [13, 14]
-  k: ESC
+  k: Esc
   l: [Base]
 - p: [45, 46]
-  k: Sft+~
+  k: '~'
   l: [Base]
 - p: [28, 27]
-  k: TAB
+  k: ⇥
   l: [Base]
