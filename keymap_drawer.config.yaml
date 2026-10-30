@@ -10,18 +10,19 @@ draw_config:
       font-family: "Inter", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
       font-weight: 600;
     }
-    /* 使っていない・割り当てのないキー枠 (trans / none / empty / ghost / 文字なし) を完全に非表示 */
-    .key.trans,
-    .key.none,
-    .key.empty,
-    .key.ghost,
+    /* テキストを持たないキー枠（外枠の空キー）および trans/none/empty/ghost を完全に消去 */
+    g.key:not(:has(text)),
+    g.key:not(:has(tspan)),
     g.key.trans,
     g.key.none,
     g.key.empty,
     g.key.ghost,
-    g.key:not(:has(text)),
-    g.key:has(text:empty) {
+    .key.trans,
+    .key.none,
+    .key.empty,
+    .key.ghost {
       display: none !important;
+      opacity: 0 !important;
     }
 
 # --- パース・表記設定 ---
@@ -29,21 +30,17 @@ parse_config:
   trans_legend: ""         # 未割り当てキーの「▽」記号を消去
 
   zmk_keycode_map:
-    # --- クォート・びっくり・はてな等の記号 ---
+    # --- 今回ご提示いただいた記号ショートカット・キー表記 ---
+    "Sft+/": "?"
+    "Sft+1": "!"
+    "Sft+DQT": '"'
     SQT: "'"
     SINGLE_QUOTE: "'"
     APOS: "'"
-    APOSTROPHE: "'"
     DQT: '"'
-    DOUBLE_QUOTES: '"'
     DOUBLE_QUOTE: '"'
-    EXCL: "!"
-    EXCLAMATION: "!"
-    QMARK: "?"
-    QUESTION: "?"
-    Sft+1: "!"
-    Sft+SQT: '"'
-    Sft+FSLH: "?"
+    LT: "<"
+    GT: ">"
 
     # --- 独自マクロ・マウス・特殊ボタン ---
     "&mkp MB5": "MB5 (進む)"
@@ -98,6 +95,8 @@ parse_config:
     CARET: "^"
     GRAVE: "`"
     TILDE: "~"
+    EXCL: "!"
+    QMARK: "?"
     PLUS: "+"
     ASTERISK: "*"
     ASTRK: "*"
