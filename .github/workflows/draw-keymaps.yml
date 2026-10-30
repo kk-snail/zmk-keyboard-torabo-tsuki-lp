@@ -14,7 +14,7 @@ jobs:
       contents: write
     with:
       keymap_patterns: "config/*.keymap"
-      parse_args: "keymap:'-c 12'"
-      draw_args: "keymap:'--cols-thumbs-notation 555555_555555'" # 正式なロングフラグに変更
+      parse_args: "keymap:'-c 14'"
+      draw_args: "keymap:'--cols-thumbs-notation 5555553_3555555'" # 33キー + 33キー = 計66キーに一致させる
       fail_on_error: true
       commit_message: "[Draw] Update keymap diagram"
