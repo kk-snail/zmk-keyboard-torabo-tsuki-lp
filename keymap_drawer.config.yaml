@@ -10,11 +10,17 @@ draw_config:
       font-family: "Inter", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
       font-weight: 600;
     }
-    /* 使っていない・割り当てのないキー枠 (trans) を枠ごと丸ごと非表示 */
+    /* 使っていない・割り当てのないキー枠 (trans / none / empty / ghost / 文字なし) を完全に非表示 */
     .key.trans,
+    .key.none,
     .key.empty,
+    .key.ghost,
     g.key.trans,
-    g.key.empty {
+    g.key.none,
+    g.key.empty,
+    g.key.ghost,
+    g.key:not(:has(text)),
+    g.key:has(text:empty) {
       display: none !important;
     }
 
@@ -23,6 +29,22 @@ parse_config:
   trans_legend: ""         # 未割り当てキーの「▽」記号を消去
 
   zmk_keycode_map:
+    # --- クォート・びっくり・はてな等の記号 ---
+    SQT: "'"
+    SINGLE_QUOTE: "'"
+    APOS: "'"
+    APOSTROPHE: "'"
+    DQT: '"'
+    DOUBLE_QUOTES: '"'
+    DOUBLE_QUOTE: '"'
+    EXCL: "!"
+    EXCLAMATION: "!"
+    QMARK: "?"
+    QUESTION: "?"
+    Sft+1: "!"
+    Sft+SQT: '"'
+    Sft+FSLH: "?"
+
     # --- 独自マクロ・マウス・特殊ボタン ---
     "&mkp MB5": "MB5 (進む)"
     "&mkp MB4": "MB4 (戻る)"
@@ -76,8 +98,6 @@ parse_config:
     CARET: "^"
     GRAVE: "`"
     TILDE: "~"
-    EXCL: "!"
-    QMARK: "?"
     PLUS: "+"
     ASTERISK: "*"
     ASTRK: "*"
@@ -116,6 +136,5 @@ parse_config:
     ESC: "Esc"
 
     # --- Shift複合記号 ---
-    Sft+FSLH: "?"
     Sft+SEMICOLON: "+"
     Sft+SEMI: "+"
