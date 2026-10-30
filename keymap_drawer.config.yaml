@@ -14,3 +14,88 @@ parse_config:
     LG(H): "Cmd H"
     LG(L): "Cmd L"
     LS(TILDE): "~"
+    # 複数キー修飾子の短縮（矢印と記号化）
+    Sft+Gui+LEFT: "⇧ Win ◄"
+    Gui+Alt+LEFT: "Win Alt ◄"
+    Gui+Alt+DOWN: "Win Alt ▼"
+    Gui+Alt+RIGHT: "Win Alt ►"
+    Sft+Gui+RIGHT: "⇧ Win ►"
+
+    # カッコ・ショートカットの整理
+    Gui+RBKT: "Cmd ]"
+    Gui+LBKT: "Cmd ["
+
+    MINUS: "-"
+    EQUAL: "="
+    COMMA: ","
+    DOT: "."
+    FSLH: "/"
+    BSLH: "\\"
+    SEMI: ";"
+    SEMICOLON: ";"
+    COLON: ":"
+    HASH: "#"
+    AT: "@"
+    DLLR: "$"
+    DOLLAR: "$"
+    PRCNT: "%"
+    PERCENT: "%"
+    AMPS: "&"
+    AMPERSAND: "&"
+    CARET: "^"
+    GRAVE: "`"
+    TILDE: "~"
+    EXCL: "!"
+    QMARK: "?"
+    PLUS: "+"
+    ASTERISK: "*"
+    ASTRK: "*"
+    LBKT: "["
+    RBKT: "]"
+    LPAR: "("
+    RPAR: ")"
+    LBRC: "{"
+    RBRC: "}"
+
+    # --- テンキー（KP）系 ---
+    KP_MULTIPLY: "*"
+    KP MULTIPLY: "*"
+    KP_PLUS: "+"
+    KP PLUS: "+"
+    KP_DIVIDE: "/"
+    KP DIVIDE: "/"
+    KP_MINUS: "-"
+    KP MINUS: "-"
+    KP_DOT: "."
+    KP DOT: "."
+    KP_EQUAL: "="
+
+    # --- 矢印キー ---
+    UP: "↑"
+    DOWN: "↓"
+    LEFT: "←"
+    RIGHT: "→"
+
+    # --- 特殊キー（アイコン化） ---
+    BSPC: "⌫"
+    RET: "⏎"
+    ENTER: "⏎"
+    SPACE: "␣"
+    TAB: "⇥"
+    ESC: "Esc"
+
+    # --- Shift複合記号 ---
+    Sft+FSLH: "?"
+    Sft+SEMICOLON: "+"
+    Sft+SEMI: "+"
+
+raw_binding_map:
+    # マウスボタン（サイドボタン）
+    "&mkp MB5": "MB5 (進む)"
+    "&mkp MB4": "MB4 (戻る)"
+
+    # iPad用カスタムマクロ（枠からはみ出ていた部分を短縮）
+    "&m_ipad_left": "iPad ◄"
+    "&m_ipad_full": "iPad 🔲"
+    "&m_ipad_right": "iPad ►"
+    "&m_globe_up": "🌐 ▲"
