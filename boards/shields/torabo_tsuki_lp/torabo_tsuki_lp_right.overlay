@@ -33,4 +33,6 @@
 /* オートマウス起動中でもレイヤーが自動解除されないキー位置（クリックキー等） */
 &zip_temp_layer {
     excluded-positions = <19 33 34 35 47>;
+
+    require-prior-idle-ms = <500>;
 };
