@@ -141,22 +141,22 @@
         arrow {
             display-name = "arrow";
             bindings = <
-&trans  &trans     &trans    &trans    &trans     &trans                            &trans         &trans      &trans       &trans         &trans  &trans
-&trans  &none      &none     &kp UP    &none      &none                             &none          &none       &none        &none          &none   &trans
-&trans  &none      &kp LEFT  &kp DOWN  &kp RIGHT  &none   &trans        &trans      &kp AT         &kp DOLLAR  &kp PERCENT  &kp AMPERSAND  &none   &trans
-&trans  &kp LSHFT  &none     &none     &none      &none   &kp LS(FSLH)  &kp LS(N1)  &kp SEMICOLON  &kp COLON   &none        &kp HASH       &none   &trans
-&trans  &none      &none     &none     &none      &none   &none         &none       &none          &trans      &trans       &none          &none   &trans
+&trans  &trans     &trans    &trans    &trans     &trans                          &trans         &trans      &trans       &trans         &trans  &trans
+&trans  &none      &none     &kp UP    &none      &none                           &none          &none       &none        &none          &none   &trans
+&trans  &none      &kp LEFT  &kp DOWN  &kp RIGHT  &none   &trans        &trans    &kp AT         &kp DOLLAR  &kp PERCENT  &kp AMPERSAND  &none   &trans
+&trans  &kp LSHFT  &none     &none     &none      &none   &kp QUESTION  &kp EXCL  &kp SEMICOLON  &kp COLON   &none        &kp HASH       &none   &trans
+&trans  &none      &none     &none     &none      &none   &none         &none     &none          &trans      &trans       &none          &none   &trans
             >;
         };
 
         skopki {
             display-name = "skopki";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                   &trans       &trans    &trans    &trans  &trans  &trans
-&trans  &none   &kp F7  &kp F8  &kp F9  &kp F12                  &none        &kp LBRC  &kp RBRC  &none   &none   &trans
-&trans  &none   &kp F4  &kp F5  &kp F6  &kp F11  &trans  &trans  &kp LS(DQT)  &kp LPAR  &kp RPAR  &kp LT  &kp GT  &trans
-&trans  &none   &kp F1  &kp F2  &kp F3  &kp F10  &none   &none   &kp SQT      &kp LBKT  &kp RBKT  &none   &none   &trans
-&trans  &none   &none   &none   &none   &none    &none   &none   &none        &trans    &trans    &none   &none   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                   &trans             &trans    &trans    &trans  &trans  &trans
+&trans  &none   &kp F7  &kp F8  &kp F9  &kp F12                  &none              &kp LBRC  &kp RBRC  &none   &none   &trans
+&trans  &none   &kp F4  &kp F5  &kp F6  &kp F11  &trans  &trans  &kp DOUBLE_QUOTES  &kp LPAR  &kp RPAR  &kp LT  &kp GT  &trans
+&trans  &none   &kp F1  &kp F2  &kp F3  &kp F10  &none   &none   &kp SQT            &kp LBKT  &kp RBKT  &none   &none   &trans
+&trans  &none   &none   &none   &none   &none    &none   &none   &none              &trans    &trans    &none   &none   &trans
             >;
         };
 
