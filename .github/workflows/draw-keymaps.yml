@@ -15,5 +15,6 @@ jobs:
     with:
       keymap_patterns: "config/*.keymap"
       parse_args: "keymap:'-c 12'"
-      draw_args: "keymap:'-o 555555_555555'" # -o (ortho-layout) に変更
+      draw_args: "keymap:'-o 555555_555555'"
+      fail_on_error: true # 解析エラー時に途中で止めてログを出力する
       commit_message: "[Draw] Update keymap diagram"
