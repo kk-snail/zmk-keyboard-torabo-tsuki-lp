@@ -1,23 +1,26 @@
 # --- 描画・デザイン設定 ---
 draw_config:
-  dark_mode: true          # シックなダークテーマを有効化
-  draw_key_sides: true     # キーキャップの立体感（側面）を描画
+  dark_mode: true          # シックなダークテーマ
+  draw_key_sides: true     # キーキャップの立体感を描画
   key_rx: 8.0              # キーの角丸サイズ
   key_ry: 8.0
   svg_extra_style: |
-    /* 洗練されたモダンフォントを適用 */
+    /* 洗練されたモダンフォント */
     svg.keymap {
       font-family: "Inter", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
       font-weight: 600;
     }
-    /* 物理的に使用していない外周キー (trans) を枠ごと消去 */
-    g.trans, rect.trans,{
+    /* 使っていない・割り当てのないキー枠 (trans) を枠ごと丸ごと非表示 */
+    .key.trans,
+    .key.empty,
+    g.key.trans,
+    g.key.empty {
       display: none !important;
     }
 
 # --- パース・表記設定 ---
 parse_config:
-  trans_legend: ""         # 未割り当てキーの「▽」記号を非表示化
+  trans_legend: ""         # 未割り当てキーの「▽」記号を消去
 
   zmk_keycode_map:
     # --- 独自マクロ・マウス・特殊ボタン ---
