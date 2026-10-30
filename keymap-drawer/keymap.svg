@@ -133,13 +133,16 @@ text.label, text.footer { stroke: black; }
 text.trans { fill: #7e8184; }
 path.combo { stroke: #7f7f7f; }
 
-/* 洗練されたモダンフォントを適用 */
+/* 洗練されたモダンフォント */
 svg.keymap {
   font-family: "Inter", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
   font-weight: 600;
 }
-/* 物理的に使用していない外周キー (trans) を枠ごと消去 */
-g.trans, rect.trans,{
+/* 使っていない・割り当てのないキー枠 (trans) を枠ごと丸ごと非表示 */
+.key.trans,
+.key.empty,
+g.key.trans,
+g.key.empty {
   display: none !important;
 }
 </style>
