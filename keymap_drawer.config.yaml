@@ -10,18 +10,18 @@ draw_config:
       font-family: "Inter", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
       font-weight: 600;
     }
-    /* 物理的に存在しない外周キー (&none) の枠を全レイヤーで完全に消去 */
-    .key.none,
-    g.key.none {
+    /* trans（外周の不要キー）の枠のみ消去（※ none は表示を残す） */
+    .key.trans,
+    g.key.trans {
       display: none !important;
     }
 
 # --- パース・表記設定 ---
 parse_config:
-  trans_legend: ""         # 未割り当てキー(&trans)の「▽」記号を消去
+  trans_legend: ""         # 未割り当てキーの「▽」記号を消去
 
   zmk_keycode_map:
-    # --- Shift複合記号（ZMK内部コード & Keymap Drawer表記を両方カバー） ---
+    # --- XML安全エスケープ表記（? / ! / " / ' / < / > / &） ---
     LS(FSLH): "?"
     LS(SLASH): "?"
     "Sft+/": "?"
@@ -32,20 +32,20 @@ parse_config:
     "Sft+1": "!"
     "Sft + 1": "!"
 
-    LS(SQT): '"'
-    LS(SINGLE_QUOTE): '"'
-    LS(APOSTROPHE): '"'
-    'Sft+"': '"'
-    'Sft + "': '"'
-    "Sft+DQT": '"'
+    LS(SQT): "&quot;"
+    LS(SINGLE_QUOTE): "&quot;"
+    LS(APOSTROPHE): "&quot;"
+    'Sft+"': "&quot;"
+    'Sft + "': "&quot;"
+    "Sft+DQT": "&quot;"
 
     SQT: "'"
     SINGLE_QUOTE: "'"
     APOS: "'"
-    DQT: '"'
-    DOUBLE_QUOTE: '"'
-    LT: "<"
-    GT: ">"
+    DQT: "&quot;"
+    DOUBLE_QUOTE: "&quot;"
+    LT: "&lt;"
+    GT: "&gt;"
 
     # --- 独自マクロ・マウス・特殊ボタン ---
     "&mkp MB5": "MB5 (進む)"
@@ -95,8 +95,8 @@ parse_config:
     DOLLAR: "$"
     PRCNT: "%"
     PERCENT: "%"
-    AMPS: "&"
-    AMPERSAND: "&"
+    AMPS: "&amp;"
+    AMPERSAND: "&amp;"
     CARET: "^"
     GRAVE: "`"
     TILDE: "~"
