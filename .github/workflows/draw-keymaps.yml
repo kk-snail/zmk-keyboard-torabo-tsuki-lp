@@ -15,5 +15,5 @@ jobs:
     with:
       keymap_patterns: "config/*.keymap"
       parse_args: "keymap:'-c 12'"
-      draw_args: "keymap:'-n 555555_555555'" # スペースをアンダースコア(_)に置き換えてシェルエラーを回避
+      draw_args: "keymap:'-o 555555_555555'" # -o (ortho-layout) に変更
       commit_message: "[Draw] Update keymap diagram"
