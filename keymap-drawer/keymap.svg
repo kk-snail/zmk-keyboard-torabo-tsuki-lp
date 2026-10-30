@@ -138,9 +138,9 @@ svg.keymap {
   font-family: "Inter", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
   font-weight: 600;
 }
-/* trans（透過キー）の枠のみ消去 */
-.key.trans,
-g.key.trans {
+/* 物理的に存在しない外周キー (&none) の枠を全レイヤーで完全に消去 */
+.key.none,
+g.key.none {
   display: none !important;
 }
 </style>
@@ -974,12 +974,12 @@ g.key.trans {
 <g transform="translate(364, 196)" class="key keypos-44">
 <rect rx="8" ry="8" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">Sft+/</text>
+<text x="0" y="-4" class="key tap">?</text>
 </g>
 <g transform="translate(476, 196)" class="key keypos-45">
 <rect rx="8" ry="8" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">Sft+1</text>
+<text x="0" y="-4" class="key tap">!</text>
 </g>
 <g transform="translate(532, 196)" class="key keypos-46">
 <rect rx="8" ry="8" x="-26" y="-26" width="52" height="52" class="key side"/>
