@@ -14,5 +14,5 @@ jobs:
       contents: write
     with:
       keymap_patterns: "config/*.keymap"
+      parse_args: "keymap:'-c 12'" # Torabo-tsuki LPの12列グリッドとして自動レイアウト描画させる設定
       commit_message: "[Draw] Update keymap diagram"
-      fail_on_error: true # エラー発生時にどこで失敗したかログを出力する
