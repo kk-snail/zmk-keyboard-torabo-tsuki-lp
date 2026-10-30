@@ -138,19 +138,14 @@ svg.keymap {
   font-family: "Inter", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
   font-weight: 600;
 }
-/* テキストを持たないキー枠（外枠の空キー）および trans/none/empty/ghost を完全に消去 */
-g.key:not(:has(text)),
-g.key:not(:has(tspan)),
-g.key.trans,
-g.key.none,
-g.key.empty,
-g.key.ghost,
-.key.trans,
+/* 無効キー (&none) や 透過キー (&trans / ghost) の枠のみ安全に非表示 */
 .key.none,
-.key.empty,
-.key.ghost {
+.key.trans,
+.key.ghost,
+g.key.none,
+g.key.trans,
+g.key.ghost {
   display: none !important;
-  opacity: 0 !important;
 }
 </style>
 <g transform="translate(30, 0)" class="layer-Base">
