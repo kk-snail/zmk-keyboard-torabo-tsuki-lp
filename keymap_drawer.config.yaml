@@ -10,15 +10,6 @@ draw_config:
       font-family: "Inter", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
       font-weight: 600;
     }
-    /* 無効キー (&none) や 透過キー (&trans / ghost) の枠のみ安全に非表示 */
-    .key.none,
-    .key.trans,
-    .key.ghost,
-    g.key.none,
-    g.key.trans,
-    g.key.ghost {
-      display: none !important;
-    }
 
 # --- パース・表記設定 ---
 parse_config:
