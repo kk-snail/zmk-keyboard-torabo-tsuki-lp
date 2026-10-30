@@ -5,6 +5,7 @@ on:
     paths:
       - "config/*.keymap"
       - "config/*.dtsi"
+      - "config/info.json"             # info.json 変更時も自動描画
       - "keymap_drawer.config.yaml"
 
 jobs:
@@ -14,7 +15,8 @@ jobs:
       contents: write
     with:
       keymap_patterns: "config/*.keymap"
+      config_path: "keymap_drawer.config.yaml"
       parse_args: ""
-      draw_args: "keymap:'-j config/info.json'" # config/info.json の正確な物理配置を使用
+      draw_args: "keymap:'-j config/info.json'"
       fail_on_error: true
       commit_message: "[Draw] Update keymap diagram"
