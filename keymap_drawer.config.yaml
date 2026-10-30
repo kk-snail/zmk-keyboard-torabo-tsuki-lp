@@ -10,21 +10,35 @@ draw_config:
       font-family: "Inter", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
       font-weight: 600;
     }
-    /* trans（透過キー）の枠のみ消去 */
-    .key.trans,
-    g.key.trans {
+    /* 物理的に存在しない外周キー (&none) の枠を全レイヤーで完全に消去 */
+    .key.none,
+    g.key.none {
       display: none !important;
     }
 
 # --- パース・表記設定 ---
 parse_config:
-  trans_legend: ""         # 未割り当てキーの「▽」記号を消去
+  trans_legend: ""         # 未割り当てキー(&trans)の「▽」記号を消去
 
   zmk_keycode_map:
-    # --- 記号ショートカット・キー表記 ---
+    # --- Shift複合記号（ZMK内部コード & Keymap Drawer表記を両方カバー） ---
+    LS(FSLH): "?"
+    LS(SLASH): "?"
     "Sft+/": "?"
+    "Sft + /": "?"
+
+    LS(N1): "!"
+    LS(NUMBER_1): "!"
     "Sft+1": "!"
+    "Sft + 1": "!"
+
+    LS(SQT): '"'
+    LS(SINGLE_QUOTE): '"'
+    LS(APOSTROPHE): '"'
+    'Sft+"': '"'
+    'Sft + "': '"'
     "Sft+DQT": '"'
+
     SQT: "'"
     SINGLE_QUOTE: "'"
     APOS: "'"
