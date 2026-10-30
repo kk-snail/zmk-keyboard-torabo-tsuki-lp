@@ -1,7 +1,14 @@
-
 parse_config:
   zmk_keycode_map:
-    # 複雑なショートカットやキーコードを短縮表示
+    # --- 独自マクロ・マウス・特殊ボタン ---
+    "&mkp MB5": "MB5 (進む)"
+    "&mkp MB4": "MB4 (戻る)"
+    "&m_ipad_left": "iPad ◄"
+    "&m_ipad_full": "iPad 🔲"
+    "&m_ipad_right": "iPad ►"
+    "&m_globe_up": "🌐 ▲"
+
+    # --- ショートカット / 複合修飾キー ---
     LC(LS(TAB)): "Tab ◄"
     LC(TAB): "Tab ►"
     LG(LEFT): "Win ◄"
@@ -14,17 +21,18 @@ parse_config:
     LG(H): "Cmd H"
     LG(L): "Cmd L"
     LS(TILDE): "~"
-    # 複数キー修飾子の短縮（矢印と記号化）
+
     Sft+Gui+LEFT: "⇧ Win ◄"
     Gui+Alt+LEFT: "Win Alt ◄"
     Gui+Alt+DOWN: "Win Alt ▼"
     Gui+Alt+RIGHT: "Win Alt ►"
     Sft+Gui+RIGHT: "⇧ Win ►"
 
-    # カッコ・ショートカットの整理
+    # カッコ・ショートカット
     Gui+RBKT: "Cmd ]"
     Gui+LBKT: "Cmd ["
 
+    # --- 基本記号 ---
     MINUS: "-"
     EQUAL: "="
     COMMA: ","
@@ -59,15 +67,15 @@ parse_config:
 
     # --- テンキー（KP）系 ---
     KP_MULTIPLY: "*"
-    KP MULTIPLY: "*"
+    "KP MULTIPLY": "*"
     KP_PLUS: "+"
-    KP PLUS: "+"
+    "KP PLUS": "+"
     KP_DIVIDE: "/"
-    KP DIVIDE: "/"
+    "KP DIVIDE": "/"
     KP_MINUS: "-"
-    KP MINUS: "-"
+    "KP MINUS": "-"
     KP_DOT: "."
-    KP DOT: "."
+    "KP DOT": "."
     KP_EQUAL: "="
 
     # --- 矢印キー ---
@@ -76,7 +84,7 @@ parse_config:
     LEFT: "←"
     RIGHT: "→"
 
-    # --- 特殊キー（アイコン化） ---
+    # --- 特殊キー ---
     BSPC: "⌫"
     RET: "⏎"
     ENTER: "⏎"
@@ -88,14 +96,3 @@ parse_config:
     Sft+FSLH: "?"
     Sft+SEMICOLON: "+"
     Sft+SEMI: "+"
-
-raw_binding_map:
-    # マウスボタン（サイドボタン）
-    "&mkp MB5": "MB5 (進む)"
-    "&mkp MB4": "MB4 (戻る)"
-
-    # iPad用カスタムマクロ（枠からはみ出ていた部分を短縮）
-    "&m_ipad_left": "iPad ◄"
-    "&m_ipad_full": "iPad 🔲"
-    "&m_ipad_right": "iPad ►"
-    "&m_globe_up": "🌐 ▲"
