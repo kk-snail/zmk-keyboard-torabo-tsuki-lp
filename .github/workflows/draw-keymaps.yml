@@ -15,6 +15,6 @@ jobs:
     with:
       keymap_patterns: "config/*.keymap"
       parse_args: "keymap:'-c 12'"
-      draw_args: "keymap:'-o 555555_555555'"
-      fail_on_error: true # 解析エラー時に途中で止めてログを出力する
+      draw_args: "keymap:'--cols-thumbs-notation 555555_555555'" # 正式なロングフラグに変更
+      fail_on_error: true
       commit_message: "[Draw] Update keymap diagram"
