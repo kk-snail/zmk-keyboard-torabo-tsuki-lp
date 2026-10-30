@@ -19,7 +19,52 @@ draw_config:
 # --- パース・表記設定 ---
 parse_config:
   zmk_keycode_map:
-    # --- 画像内テキストの簡略化（パース結果文字列ダイレクト指定） ---
+    # --- 文字化け・生記号置換 ---
+    "&amp;": "&"
+    "&lt;": "<"
+    "&gt;": ">"
+    "&quot;": '"'
+
+    # --- クエスチョン・ダブルクオート・記号コード ---
+    QUESTION: "?"
+    "QUESTION": "?"
+    QMARK: "?"
+
+    DOUBLE_QUOTES: '"'
+    "DOUBLE QUOTES": '"'
+    DOUBLE_QUOTE: '"'
+    "DOUBLE QUOTE": '"'
+    DQT: '"'
+
+    LT: "<"
+    GT: ">"
+    AMPS: "&"
+    AMPERSAND: "&"
+
+    # --- Shift複合記号 ---
+    LS(FSLH): "?"
+    LS(SLASH): "?"
+    "Sft+/": "?"
+    "Sft + /": "?"
+
+    LS(N1): "!"
+    LS(NUMBER_1): "!"
+    "Sft+1": "!"
+    "Sft + 1": "!"
+
+    LS(SQT): '"'
+    LS(SINGLE_QUOTE): '"'
+    LS(APOSTROPHE): '"'
+    'Sft+"': '"'
+    'Sft + "': '"'
+    "Sft+DQT": '"'
+    "Sft+~": "~"
+
+    SQT: "'"
+    SINGLE_QUOTE: "'"
+    APOS: "'"
+
+    # --- ショートカット / 複合修飾キー / マクロ ---
     "Ctl+W": "Ctrl W"
     "Ctl+T": "Ctrl T"
     "Ctl+L": "Ctrl L"
@@ -44,47 +89,12 @@ parse_config:
     "Gui+]": "Cmd ]"
     "Gui+[": "Cmd ["
 
-    # --- 記号・Shift複合 ---
-    "Sft+/": "?"
-    "Sft+1": "!"
-    'Sft+"': "&quot;"
-    "Sft+DQT": "&quot;"
-    "Sft+~": "~"
-
-    SQT: "'"
-    SINGLE_QUOTE: "'"
-    APOS: "'"
-    DQT: "&quot;"
-    DOUBLE_QUOTE: "&quot;"
-    LT: "&lt;"
-    GT: "&gt;"
-
-    # --- マクロ / マウスボタン短縮 ---
     "&mkp MB5": "MB5"
     "&mkp MB4": "MB4"
     "&m_ipad_left": "iPad ◄"
     "&m_ipad_full": "iPad 🔲"
     "&m_ipad_right": "iPad ►"
     "&m_globe_up": "🌐 ▲"
-
-    # --- 予備：ZMK生コード表記マッピング ---
-    LC(W): "Ctrl W"
-    LC(T): "Ctrl T"
-    LC(L): "Ctrl L"
-    LC(TAB): "Tab ►"
-    LC(LS(TAB)): "Tab ◄"
-    LG(LEFT): "Win ◄"
-    LG(UP): "Win ▲"
-    LG(RIGHT): "Win ►"
-    LG(DOWN): "Win ▼"
-    LG(W): "Cmd W"
-    LG(T): "Cmd T"
-    LG(R): "Cmd R"
-    LG(H): "Cmd H"
-    LG(L): "Cmd L"
-    LG(RBKT): "Cmd ]"
-    LG(LBKT): "Cmd ["
-    LS(TILDE): "~"
 
     # --- 基本記号 ---
     MINUS: "-"
@@ -102,8 +112,6 @@ parse_config:
     DOLLAR: "$"
     PRCNT: "%"
     PERCENT: "%"
-    AMPS: "&amp;"
-    AMPERSAND: "&amp;"
     CARET: "^"
     GRAVE: "`"
     TILDE: "~"
