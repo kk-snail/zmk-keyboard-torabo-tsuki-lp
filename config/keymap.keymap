@@ -21,60 +21,6 @@
             hold-trigger-on-release;
             bindings = <&kp>, <&kp>;
         };
-
-        screenshot: screenshot {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LA(S))>;
-        };
-
-        m_win_left: m_win_left {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(LEFT)>;
-        };
-
-        m_win_right: m_win_right {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(RIGHT)>;
-        };
-
-        m_win_third_left: m_win_third_left {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(LA(LEFT))>;
-        };
-
-        m_win_third_center: m_win_third_center {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(LA(DOWN))>;
-        };
-
-        m_win_third_right: m_win_third_right {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(LA(RIGHT))>;
-        };
-
-        m_tab_left: m_tab_left {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LS(TAB))>;
-        };
-
-        m_tab_right: m_tab_right {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(TAB)>;
-        };
-
-        custom: custom {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp A>;
-        };
     };
 
     macros {
@@ -151,11 +97,11 @@
         function {
             display-name = "function";
             bindings = <
-&trans  &trans  &trans        &trans        &trans        &trans                                                &trans  &trans      &trans    &trans      &trans          &trans
-&trans  &none   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &out OUT_BLE                                          &none   &none       &none     &kp PSCRN   &screenshot     &trans
-&trans  &none   &none         &none         &kp C_VOL_UP  &kp C_BRI_UP  &trans        &trans                    &none   &kp C_PREV  &kp C_PP  &kp C_NEXT  &none           &trans
-&trans  &none   &none         &none         &kp C_VOL_DN  &kp C_BRI_DN  &none         &none                     &none   &kp C_MUTE  &none     &none       &bt BT_CLR      &trans
-&trans  &trans  &trans        &trans        &trans        &trans        &trans        &trans                    &trans  &trans      &trans    &trans      &bt BT_CLR_ALL  &trans
+&trans  &trans  &trans        &trans        &trans        &trans                                                &trans  &trans      &trans    &trans       &trans          &trans
+&trans  &none   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &out OUT_BLE                                          &none   &none       &none     &kp PSCRN    &kp LC(LA(S))   &trans
+&trans  &none   &none         &none         &kp C_VOL_UP  &kp C_BRI_UP  &trans        &trans                    &none   &kp C_PREV  &kp C_PP  &kp C_NEXT   &none           &trans
+&trans  &none   &none         &none         &kp C_VOL_DN  &kp C_BRI_DN  &none         &none                     &none   &kp C_MUTE  &none     &none        &bt BT_CLR      &trans
+&trans  &trans  &trans        &trans        &trans        &trans        &trans        &trans                    &trans  &trans      &trans    &trans       &bt BT_CLR_ALL  &trans
             >;
         };
 
@@ -170,25 +116,27 @@
             >;
         };
 
+        /* Layer 6 : Windows用スクロール & ショートカット */
         scroll {
             display-name = "scroll";
             bindings = <
-&trans  &trans            &trans              &trans              &trans              &trans                                                &trans  &trans       &trans        &trans        &trans  &trans
-&trans  &kp LC(W)         &m_win_left        &kp LG(UP)          &m_win_right        &none                                                 &none   &mkp MB5     &kp LC(T)     &kp F5        &none   &trans
-&trans  &kp LS(LG(LEFT))  &m_win_third_left  &m_win_third_center &m_win_third_right  &kp LS(LG(RIGHT))  &trans  &trans     &none   &m_tab_left  &none        &m_tab_right  &none   &trans
-&trans  &none             &none              &none               &none               &none              &trans  &trans     &none   &mkp MB4     &kp LG(DOWN) &none         &none   &trans
-&trans  &trans            &trans              &trans              &trans              &trans             &trans  &kp LC(L)  &trans  &trans       &trans       &trans        &trans  &trans
+&trans  &trans            &trans            &trans            &trans            &trans                                                &trans  &trans          &trans          &trans        &trans  &trans
+&trans  &kp LC(W)         &kp LG(LEFT)      &kp LG(UP)        &kp LG(RIGHT)     &none                                                 &none   &mkp MB5        &kp LC(T)       &kp F5        &none   &trans
+&trans  &kp LS(LG(LEFT))  &kp LG(LA(LEFT))  &kp LG(LA(DOWN))  &kp LG(LA(RIGHT)) &kp LS(LG(RIGHT))  &trans  &trans     &none   &kp LC(LS(TAB))  &none           &kp LC(TAB)     &none   &trans
+&trans  &none             &none             &none             &none             &none              &trans  &trans     &none   &mkp MB4        &kp LG(DOWN)    &none           &none   &trans
+&trans  &trans            &trans            &trans            &trans            &trans             &trans  &kp LC(L)  &trans  &trans          &trans          &trans          &trans  &trans
             >;
         };
 
+        /* Layer 7 : iPadOS用スクロール & ショートカット */
         ipad_scroll {
             display-name = "ipad_scrl";
             bindings = <
-&trans  &trans            &trans              &trans              &trans              &trans                                                &trans  &trans       &trans        &trans        &trans  &trans
-&trans  &kp LC(W)         &m_win_left        &kp LG(UP)          &m_win_right        &none                                                 &none   &mkp MB5     &kp LC(T)     &kp F5        &none   &trans
-&trans  &kp LS(LG(LEFT))  &m_win_third_left  &m_win_third_center &m_win_third_right  &kp LS(LG(RIGHT))  &trans  &trans     &none   &m_tab_left  &none        &m_tab_right  &none   &trans
-&trans  &none             &none              &none               &none               &none              &trans  &trans     &none   &mkp MB4     &kp LG(DOWN) &none         &none   &trans
-&trans  &trans            &trans              &trans              &trans              &trans             &trans  &kp LC(L)  &trans  &trans       &trans       &trans        &trans  &trans
+&trans  &trans            &trans            &trans            &trans            &trans                                                &trans  &trans          &trans          &trans        &trans  &trans
+&trans  &kp LG(W)         &kp LG(LC(LEFT))  &kp LG(LC(F))     &kp LG(LC(RIGHT)) &none                                                 &none   &mkp MB5        &kp LG(T)       &kp LG(R)     &none   &trans
+&trans  &none             &none             &none             &none             &none              &trans  &trans     &none   &kp LG(LS(TAB))  &none          &kp LG(TAB)     &none   &trans
+&trans  &none             &none             &none             &none             &none              &trans  &trans     &none   &mkp MB4        &kp LG(H)       &none           &none   &trans
+&trans  &trans            &trans            &trans            &trans            &trans             &trans  &kp LG(L)  &trans  &trans          &trans          &trans          &trans  &trans
             >;
         };
     };
