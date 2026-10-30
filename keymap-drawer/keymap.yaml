@@ -103,7 +103,7 @@ layers:
   - '@'
   - $
   - '%'
-  - '&amp;'
+  - '&'
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -170,7 +170,7 @@ layers:
   - '@'
   - $
   - '%'
-  - '&amp;'
+  - '&'
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -179,7 +179,7 @@ layers:
   - ''
   - ''
   - ''
-  - QUESTION
+  - '?'
   - '!'
   - ;
   - ':'
@@ -234,11 +234,11 @@ layers:
   - F11
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - DOUBLE QUOTES
+  - '"'
   - (
   - )
-  - '&lt;'
-  - '&gt;'
+  - <
+  - '>'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
@@ -416,14 +416,14 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Ctrl W
-  - Win ◄
-  - Win ▲
-  - Win ►
+  - Ctl+W
+  - Gui+←
+  - Gui+↑
+  - Gui+→
   - ''
   - ''
   - '&mkp MB5'
-  - Ctrl T
+  - Ctl+T
   - F5
   - {type: held}
   - {t: ▽, type: trans}
@@ -436,8 +436,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  - Tab ◄
-  - Tab ►
+  - Ctl+Sft+⇥
+  - Ctl+⇥
   - ''
   - ''
   - {t: ▽, type: trans}
@@ -451,7 +451,7 @@ layers:
   - ''
   - ''
   - '&mkp MB4'
-  - Win ▼
+  - Gui+↓
   - ''
   - ''
   - {t: ▽, type: trans}
@@ -462,7 +462,7 @@ layers:
   - ''
   - ''
   - ''
-  - Ctrl L
+  - Ctl+L
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -483,16 +483,16 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Cmd W
+  - Gui+W
   - '&m_ipad_left'
   - '&m_ipad_full'
   - '&m_ipad_right'
   - ''
   - ''
-  - Cmd ]
-  - Cmd T
+  - Gui+]
+  - Gui+T
   - {type: held}
-  - Cmd R
+  - Gui+R
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
@@ -503,8 +503,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&m_globe_up'
-  - Tab ◄
-  - Tab ►
+  - Ctl+Sft+⇥
+  - Ctl+⇥
   - ''
   - ''
   - {t: ▽, type: trans}
@@ -517,8 +517,8 @@ layers:
   - ''
   - ''
   - ''
-  - Cmd [
-  - Cmd H
+  - Gui+[
+  - Gui+H
   - ''
   - ''
   - {t: ▽, type: trans}
@@ -529,7 +529,7 @@ layers:
   - ''
   - ''
   - ''
-  - Cmd L
+  - Gui+L
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -541,7 +541,7 @@ combos:
   k: Esc
   l: [Base]
 - p: [45, 46]
-  k: '~'
+  k: Sft+~
   l: [Base]
 - p: [28, 27]
   k: ⇥
