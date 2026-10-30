@@ -14,5 +14,6 @@ jobs:
       contents: write
     with:
       keymap_patterns: "config/*.keymap"
-      parse_args: "keymap:'-c 12'" # Torabo-tsuki LPの12列グリッドとして自動レイアウト描画させる設定
+      parse_args: "keymap:'-c 12'" # 12列グリッドとしてパース
+      draw_args: "keymap:'-n 555555 555555'" # 左右6列×5行のオルソレイアウトで描画
       commit_message: "[Draw] Update keymap diagram"
