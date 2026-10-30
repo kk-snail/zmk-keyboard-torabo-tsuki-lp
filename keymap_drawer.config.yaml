@@ -16,10 +16,7 @@ draw_config:
       display: none !important;
     }
 
-# --- パース・表記設定 ---
-parse_config:
-  trans_legend: ""         # 未割り当てキーの「▽」記号を消去
-
+# --- パース・表記設定 --
   zmk_keycode_map:
     # --- XML安全エスケープ表記（? / ! / " / ' / < / > / &） ---
     LS(FSLH): "?"
