@@ -6,11 +6,12 @@
 #include <dt-bindings/zmk/input_transform.h>
 
 &pointing_listener {
-    /* 通常時（オートマウス）：座標反転 ＋ 自動的に Layer 5（10秒保持）へ一時切り替え */
     input-processors = 
         <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
         <&zip_xy_scaler 1 2>,
-        <&zip_temp_layer 5 5000>;
+        <&zip_temp_layer 5 1500>;
+
+        require-prior-idle-ms = <500>;
 
     /* Pキー長押し（Layer 6）：PC用スクロール（1/2減速） */
     scroll {
@@ -25,7 +26,7 @@
         layers = <7>;
         input-processors = 
         <&zip_xy_to_scroll_mapper>,
-        <&zip_scroll_scaler 1 12>;
+        <&zip_scroll_scaler 1 20>;
     };
 };
 
