@@ -118,11 +118,11 @@
         scroll {
             display-name = "scroll";
             bindings = <
-&trans  &trans            &trans            &trans            &trans             &trans                                &trans  &trans           &trans        &trans       &trans  &trans
-&trans  &kp LC(W)         &kp LG(LEFT)      &kp LG(UP)        &kp LG(RIGHT)      &none                                 &none   &mkp MB5         &kp LC(T)     &kp F5       &none   &trans
-&trans  &kp LS(LG(LEFT))  &kp LG(LA(LEFT))  &kp LG(LA(DOWN))  &kp LG(LA(RIGHT))  &kp LS(LG(RIGHT))  &trans  &trans     &none   &kp LC(LS(TAB))  &none         &kp LC(TAB)  &none   &trans
-&trans  &none             &none             &none             &none              &none              &trans  &trans     &none   &mkp MB4         &kp LG(DOWN)  &none        &none   &trans
-&trans  &trans            &trans            &trans            &trans             &trans             &trans  &kp LC(L)  &trans  &trans           &trans        &trans       &trans  &trans
+&trans  &trans            &trans            &trans            &trans             &trans                                &trans  &trans           &trans        &trans  &trans  &trans
+&trans  &kp LC(W)         &kp LG(LEFT)      &kp LG(UP)        &kp LG(RIGHT)      &none                                 &none   &mkp MB5         &kp LC(T)     &kp F5  &none   &trans
+&trans  &kp LS(LG(LEFT))  &kp LG(LA(LEFT))  &kp LG(LA(DOWN))  &kp LG(LA(RIGHT))  &kp LS(LG(RIGHT))  &trans  &trans     &none   &kp LC(LS(TAB))  &kp LC(TAB)   &none   &none   &trans
+&trans  &none             &none             &none             &none              &none              &trans  &trans     &none   &mkp MB4         &kp LG(DOWN)  &none   &none   &trans
+&trans  &trans            &trans            &trans            &trans             &trans             &trans  &kp LC(L)  &trans  &trans           &trans        &trans  &trans  &trans
             >;
         };
 
@@ -131,11 +131,11 @@
         ipad_scroll {
             display-name = "ipad_scrl";
             bindings = <
-&trans  &trans     &trans            &trans         &trans             &trans                     &trans  &trans           &trans     &trans       &trans  &trans
-&trans  &kp LG(W)  &kp LG(LC(LEFT))  &kp LG(LC(F))  &kp LG(LC(RIGHT))  &none                      &none   &mkp MB5         &kp LG(T)  &kp LG(R)    &none   &trans
-&trans  &none      &none             &none          &none              &none   &trans  &trans     &none   &kp LG(LS(TAB))  &none      &kp LG(TAB)  &none   &trans
-&trans  &none      &none             &none          &none              &none   &trans  &trans     &none   &mkp MB4         &kp LG(H)  &none        &none   &trans
-&trans  &trans     &trans            &trans         &trans             &trans  &trans  &kp LG(L)  &trans  &trans           &trans     &trans       &trans  &trans
+&trans  &trans     &trans            &trans         &trans             &trans                     &trans  &trans           &trans       &trans  &trans     &trans
+&trans  &kp LG(W)  &kp LG(LC(LEFT))  &kp LG(LC(F))  &kp LG(LC(RIGHT))  &none                      &none   &mkp MB5         &kp LG(T)    &none   &kp LG(R)  &trans
+&trans  &none      &none             &none          &none              &none   &trans  &trans     &none   &kp LG(LS(TAB))  &kp LG(TAB)  &none   &none      &trans
+&trans  &none      &none             &none          &none              &none   &trans  &trans     &none   &mkp MB4         &kp LG(H)    &none   &none      &trans
+&trans  &trans     &trans            &trans         &trans             &trans  &trans  &kp LG(L)  &trans  &trans           &trans       &trans  &trans     &trans
             >;
         };
     };
