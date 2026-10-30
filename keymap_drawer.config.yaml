@@ -1,1 +1,16 @@
 
+parse_config:
+  zmk_keycode_map:
+    # 複雑なショートカットやキーコードを短縮表示
+    LC(LS(TAB)): "Tab ◄"
+    LC(TAB): "Tab ►"
+    LG(LEFT): "Win ◄"
+    LG(RIGHT): "Win ►"
+    LG(UP): "Win ▲"
+    LG(DOWN): "Win ▼"
+    LG(W): "Cmd W"
+    LG(T): "Cmd T"
+    LG(R): "Cmd R"
+    LG(H): "Cmd H"
+    LG(L): "Cmd L"
+    LS(TILDE): "~"
