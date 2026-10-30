@@ -11,8 +11,6 @@
         <&zip_xy_scaler 1 2>,
         <&zip_temp_layer 5 1500>;
 
-        require-prior-idle-ms = <500>;
-
     /* Pキー長押し（Layer 6）：PC用スクロール（1/2減速） */
     scroll {
         layers = <6>;
@@ -20,8 +18,6 @@
         <&zip_xy_to_scroll_mapper>,
         <&zip_scroll_scaler 1 2>;
     };
-
-    /* Oキー長押し（Layer 7）：iPad用スクロール（1/12超減速） */
     scroll_ipad {
         layers = <7>;
         input-processors = 
