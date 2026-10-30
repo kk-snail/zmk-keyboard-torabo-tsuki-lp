@@ -12,12 +12,20 @@
         <&zip_xy_scaler 1 2>,
         <&zip_temp_layer 5 5000>;
 
-    /* Pキー長押し（Layer 6）：トラックボール移動をスクロールに変換 */
+    /* Pキー長押し（Layer 6）：PC用スクロール（1/2減速） */
     scroll {
         layers = <6>;
         input-processors = 
         <&zip_xy_to_scroll_mapper>,
         <&zip_scroll_scaler 1 2>;
+    };
+
+    /* Oキー長押し（Layer 7）：iPad用スクロール（1/12超減速） */
+    scroll_ipad {
+        layers = <7>;
+        input-processors = 
+        <&zip_xy_to_scroll_mapper>,
+        <&zip_scroll_scaler 1 12>;
     };
 };
 
