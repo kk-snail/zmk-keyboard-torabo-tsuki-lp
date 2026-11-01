@@ -435,7 +435,7 @@ layers:
   - Sft+Gui+→
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ''
+  - Gui+⇥
   - Ctl+Sft+⇥
   - Ctl+⇥
   - ''
