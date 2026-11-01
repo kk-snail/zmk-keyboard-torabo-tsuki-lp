@@ -418,7 +418,7 @@ layers:
   - {t: ▽, type: trans}
   - Ctl+W
   - Gui+←
-  - Gui+↑
+  - '&m_win_max'
   - Gui+→
   - ''
   - ''
