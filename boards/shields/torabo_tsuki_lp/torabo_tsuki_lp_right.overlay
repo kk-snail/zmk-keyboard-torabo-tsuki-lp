@@ -9,7 +9,7 @@
     input-processors = 
         <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
         <&zip_xy_scaler 1 2>,
-        <&zip_temp_layer 5 1500>;
+        <&zip_temp_layer 5 10000>;
 
     /* Pキー長押し（Layer 6）：PC用スクロール（1/2減速） */
     scroll {
