@@ -197,7 +197,7 @@
 &trans  &trans            &trans            &trans            &trans             &trans                                &trans        &trans           &trans        &trans  &trans  &trans
 &trans  &kp LC(W)         &kp LG(LEFT)      &m_win_max        &kp LG(RIGHT)      &none                                 &none         &mkp MB5         &kp LC(T)     &kp F5  &none   &trans
 &trans  &kp LS(LG(LEFT))  &kp LG(LA(LEFT))  &kp LG(LA(DOWN))  &kp LG(LA(RIGHT))  &kp LS(LG(RIGHT))  &trans  &trans     &kp LG(TAB)   &kp LC(LS(TAB))  &kp LC(TAB)   &none   &none   &trans
-&trans  &none             &none             &none             &none              &none              &none   &none      &none         &mkp MB4         &kp LG(DOWN)  &none   &none   &trans
+&trans  &none             &none             &none             &none              &none              &none   &none      &kp LC(W)     &mkp MB4         &kp LG(DOWN)  &none   &none   &trans
 &trans  &none             &none             &none             &none              &none              &none   &kp LC(L)  &none         &trans           &trans        &none   &none   &trans
             >;
         };
